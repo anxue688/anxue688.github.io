@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>泥吃枣药丸</title>
+  <title>MySQL复杂查询以及JS(javaScript)定义与开发 | 泥吃枣药丸</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="沙雕博客">
+  <meta name="description" content="1.复杂查询————聚合查询/分组查询      (1）聚合查询              示例： 查询出所有员工的数量                              SELECT COUNT(eid) FROM emp;                              SELECT COUNT(ename) FROM emp;">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="泥吃枣药丸">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL复杂查询以及JS(javaScript)定义与开发">
+<meta property="og:url" content="http://yoursite.com/2018/12/06/day05/index.html">
 <meta property="og:site_name" content="泥吃枣药丸">
-<meta property="og:description" content="沙雕博客">
+<meta property="og:description" content="1.复杂查询————聚合查询/分组查询      (1）聚合查询              示例： 查询出所有员工的数量                              SELECT COUNT(eid) FROM emp;                              SELECT COUNT(ename) FROM emp;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-06T12:25:15.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="泥吃枣药丸">
-<meta name="twitter:description" content="沙雕博客">
+<meta name="twitter:title" content="MySQL复杂查询以及JS(javaScript)定义与开发">
+<meta name="twitter:description" content="1.复杂查询————聚合查询/分组查询      (1）聚合查询              示例： 查询出所有员工的数量                              SELECT COUNT(eid) FROM emp;                              SELECT COUNT(ename) FROM emp;">
   
     <link rel="alternative" href="/atom.xml" title="泥吃枣药丸" type="application/atom+xml">
   
@@ -158,16 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-day05" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-day05" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL复杂查询以及JS(javaScript)定义与开发
     </h1>
   
 
@@ -273,6 +272,27 @@ node  c:/xampp/.../02.js
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -280,16 +300,75 @@ node  c:/xampp/.../02.js
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/06/day05/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/06/day05/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/05/day04/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL的自增列</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -309,385 +388,14 @@ node  c:/xampp/.../02.js
 
 
 
-
   
-    <article id="post-day04" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/05/day04/">MySQL的自增列</a>
-    </h1>
   
 
-        
-        <a href="/2018/12/05/day04/" class="archive-article-date">
-  	<time datetime="2018-12-05T11:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.列约束<br>（1）主键约束————PRIMARY KEY<br>（2）唯一约束————UNIQUE                     *syntax语法错误<br>（3）非空约束————NOT NULL<br>     声明了非空约束的列上不能插入NULL<br>（4）默认值约束————DEFAULT<br>     DEFAULT关键字声明默认值，有两种方式可以应用默认值<br>     INSERT INTO xz VALUES(40,’苹果’,DEFAULT);<br>     INSERT INTO xz (fid,fname)VALUES(50,’华硕’,DEFAULT);<br>（5）检查约束————CHECK<br>     检查约束可以对插入的数据进行检验<br>     CREATE INTO xz VALUES(age TINYINT CHECK(age&gt;=18 AND age&lt;=60))<br>     CREATE INTO xz VALUES()<br>     MySQL不支持检查约束，会降低数据的插入速度<br>（6）外键约束————FOREIGN KEY<br>     声明了外键约束的列，取值必须在另一个表的主题列键上出现过，列类型要保持一致,取值可以是NULL<br>     FOREIGN KEY(familyld)     REFERENCES xz(fid) #REFERENCES#引用</p>
-<p>2.MySQL中的自增列<br>   （1）AUTO_INCREMENT:自动增长，加入一个列声明了自增列，无需手动赋值。直接设  置为NULL,会获得当前的最大值，最后+1插入。</p>
-<pre><code>注意：
-    自增列允许手动赋值
-只适用于整数型的主键列上
-</code></pre><p>课堂练习 【创建脚本xz.sql,数据库xz，设置编码UTF8，表dept(did,dname),10 研发部 20 市场部 30 运营部 40 测试部】<br>         【表emp(eid,ename,sex,birthday生日,salary工资,deptld所属部门编号)插入15条记录，有一个员工没有确定部门，有一个部门没有员工】</p>
-<p>   （2）查询所有的列<br>         查询所有员工的编号，姓名，性别，所属部门编号<br>                  SELECT eid,ename,sex,deptld FROM emp;<br>   （3）给列起别名<br>        示例：查询所有员工的姓名和工资，使用汉字的别名显示<br>                  SELECT ename AS 姓名,salary AS 工资 FROM emp;</p>
-<pre><code>注意:AS关键字可以省略，要保留空格。
-</code></pre><p>   （4）只显示不同的记录/合并相同的记录<br>        示例：查询出员工都在哪些部门<br>                  SELECT DISTINCT deptId FROM emp;    #DISTINCT合并<br>        练习，都有哪些性别的员工<br>                  SELECT DISTINCT sex FROM emp;<br>   （5）在查询时执行计算<br>        示例：计算2  <em> 33/47-8+10<br>                  SELECT 2  </em> 33/47-8+10;<br>        练习：查询所有员工的姓名及其年薪<br>                  SELECT ename,salary<em>12 FROM emp;<br>        练习：假设每个员工工资增加500元，年终奖5000元，查询所有员工的姓名及其年薪，要给列起别名<br>                  SELECT ename 姓名,(salary+500)</em>12+5000 工资 FROM emp;<br>   （6）查询结果集的排序<br>        示例：查询所有的部门，结果按照部门编号升序排序<br>                  SELECT  <em>  FROM dept ORDER BY did ASC;  #ascendant向上的<br>        示例：查询所有的部门，结果按照部门编号降序排序<br>                  SELECT  </em>  FROM dept ORDER BY did DESC; #desc由大到小<br>        练习：查询所有员工信息，结果按照工资由大到小排序<br>                  SELECT  <em>  FROM emp ORDER BY salary DESC;<br>        练习：查询所有员工信息，结果满足性别分类，工资由小到大排序<br>                  SELECT  </em>  FROM emp ORDER BY sex,salary;</p>
-<pre><code>ORDER BY 可以按照数值，日期/时间，字符串来排序，默认是按照ASC升序排序
-</code></pre><p>   （7）条件查询<br>        示例：查询出编号为5的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE eid=5;<br>        练习：查询出姓名为king的员工的编号，工资，生日。<br>                  SELECT eid,birthday,salary FROM emp WHERE ename=’king’;<br>        练习：查询出部门编号为20的所有信息<br>                  SELECT  </em>  FROM emp WHERE deptId=20;<br>        练习：查询出男员工的所有信息<br>                  SELECT  <em>  FROM emp WHERE sex=1;<br>        练习：查询出工资大于等于5000的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE salary&gt;=5000;<br>                【&gt;=  &lt;=  &lt;  &gt;  =  !=(不等于)】比较运算符<br>        练习：查询出1991-1-1后出生的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE birthday&gt;=’1991-1-1’;<br>        练习：查询出部门编号不能为空的部门所有人员信息<br>                  SELECT  </em>  FROM emp WHERE deptId IS NOT NULL;    #IS NULL/IS NOT NULL<br>        练习：查询出工资大于6000的女员工所有信息<br>                  SELECT  <em>  FROM emp WHERE salary&gt;6000 AND sex=0;<br>        练习:查询出工资在5000~7000之间的员工的所有信息<br>                  SELECT  </em>  FROM emp WHERE salary&gt;=5000 and salary&lt;=7000;     #between…and…两者之间<br>                  SELECT  <em>  FROM emp WHERE salary between 5000 and 7000;<br>        练习：查询出工资为5000以下，7000以上的员工信息。<br>                  SELECT  </em>  FROM emp WHERE salary&gt;5000 or salary&lt;7000;<br>                  SELECT  <em>  FROM emp WHERE salary not between 5000 and 7000;<br>        练习：查询出1990年之前出生的员工，和1993之后出生的员工的所有的信息<br>                  SELECT  </em>  FROM emp WHERE birthday not between ‘1990-1-1’ and ‘1993-12-31’;<br>                  SELECT  <em>  FROM emp WHERE birthday&lt;’1990-1-1’ or birthday&gt;’1993-12-31’;<br>        练习：查询出1993年出生的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE birthday between’1993-1-1’ and ‘1993-12-31’;<br>        练习：查询出10号部门和30号部门员工所有信息<br>                  SELECT  <em>  FROM emp WHERE deptId=30 or deptId=10;<br>                  SELECT  </em>  FROM emp WHERE deptId IN(10,30);<br>        练习：查询不在10号和30号部门员工所有信息<br>                  SELECT  *  FROM emp WHERE deptId not in(10,30);</p>
-<pre><code>IS NULL/IS NOT NULL(有明确部门/没有明确部门)
-AND/OR   (和/或)
-BETWEEN...AND.../NOT BETWEEN...AND...
-IN()/NOT IN()
-注意：删除、更改、查询都可以结合查询。
-</code></pre><p>   （8）模糊条件查询<br>        示例：查询出员工姓名含有字母e的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE ename LIKE’%e%’;<br>        练习：查询出姓名中以e结尾的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE ename LIKE’%e’;<br>        练习：查询出姓名中倒数第二个字符为e的员工所有信息<br>                  SELECT  *  FROM emp WHERE ename LIKE’%e_’; </p>
-<pre><code>     SQL中提供了两个模糊查询的字符
-%  可以匹配任意多个字符   &gt;=0
-_  可以匹配任意一个字符   =1
-注意：以上两个匹配不能和=使用，必须使用LIKE关键字
-</code></pre><p>   （9）分页查询<br>         假如查询的结果有太多的数据，一次显示不完，可以分页显示<br>         需要有两个条件  当前的页码、每页的数据量<br>                  SELECT  *  FROM emp LIMIT start,count()      # LIMIT限制<br>                  start:是一个数字，从结果集中的哪1条开始读取，第一条成为0，<br>                  count:是一个数字，最多读取的行数</p>
-<pre><code>    每页开始的算法：start=(页码-1)*count
-
-假设每一页显示五条记录
-第一页：SELECT  *  FROM emp LIMIT 0,5; 
-第二页：SELECT  *  FROM emp LIMIT 5,5;
-</code></pre><p>   课后任务：<br>    （1）复习今天的内容，删除代码，保留注释重新编写代码<br>    （2）练习：<br>        查询出工资为8000以上的女员工的姓名，性别，生日，结果集按照工资降序排序，取前3个人。<br>    （3）查看’学子商城’的完整规划图</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/05/day04/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day03" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/04/day03/">DAY THERE 关于计算的字符和MySQL的列类型和约束</a>
-    </h1>
   
 
-        
-        <a href="/2018/12/04/day03/" class="archive-article-date">
-  	<time datetime="2018-12-04T12:42:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>DDL：data Define language      定义数据结构<br>      CREATE/DROP/ALTER<br>DML：data munipulate language  操作数据<br>      INSERT/ DELETE/UPDOTE<br>DQL: data query language       查询数据<br>      SELECT<br>DCL: data control language     控制用户权限<br>     GRANT(授权)/RECOKE(收权)<br>1.计算机储存字符<br>  （1）如何储存英文字符<br>             ASCII：  总共有128个，对所有的英文字符及标点符号进行了编码。<br>           hello -&gt;72102108108111<br>         latin-1: 总共有256个，兼容ASCII码，同时对欧洲符号进行了编码。<br>           MySQL默认就使用这种编码<br>  （2）如何存储中文字符<br>               GB2312： 对常用的6千多汉字进行了编码，兼容ASCII编码<br>           GBK：    对两万多个汉字进行编码，兼容GB2312<br>           BIG5：   台湾繁体字编码，只兼容ASCII<br>           Unicode: 对世界上主流的语言常用的字符进行的编码，兼容ASCII,不兼容GBK,GB2312，BIG5等系列。<br>                    具体分为UTF8-8、UTF-16、UTF-32等存储方案<br>  （3）解决MySQL存储中文乱码<br>               sql脚本文件存储的编码utf8<br>           客户端连接服务器端使用的编码为utf8<br>           服务器端创建数据库存储使用的编码为utf8<br>2.MySQL中的列类型<br>   创建数据表的时候，指定的列可以存储的数据类型。<br>          CREATE TABLE book(bid列类型)<br>  （1）数值类型——引号可加可不加<br>        TINYINT  微整型，占1个字节 范围-128~127<br>    SMALLINT 小整型，占2个字节 范围-32768~32767<br>    INT      整型，  占4个字节 范围-2147483648~2147483647<br>        BIGINT   大整型，占8个字节<br>    FLOAT  单精度浮点型，占4个字节，范围3.4e38，范围比INT大得多，精确度没INT高，可能产生计算误差。<br>        SOUBLE 双精度浮点型，占8个字节，范围比BIGINT大得多<br>        DECIMAL(M,D) 定点小数，不会产生计算误差，M代表总的有效位数，D代表小数点后的有效位数  *<br>    BOOL   布尔型，只有两个结果TRUE/1、FALSE/0，TRUE/FALSE不能添加引号；真正在存储数据的时候会使用TINGINT。<br>  （2）日期时间类型——必须添加引号<br>        DATE 日期型    ‘2018-12-31’<br>        TIME 时间型    ‘14:22:30’<br>        DATETIME  日期时间型  ‘2018-12-31  14:22:30’<br>  （3）字符串类型——必须添加引号<br>        VARCHAR(M) 变长字符串，不会产生空间的浪费，操作速度相对较慢，M最大值是65535      \0表空格<br>        CHAR(M)    定长字符串，可能产生空间浪费，操作速度较快，M最大值255；用于存储手机号码，身份证号等固定长度的字符。<br>        TEXT(M)   大型变长字符串，最多存2G<br>             TB GB MB KB BT(byte字节) BIT  1BT=8BIT</p>
-<pre><code>laptop(笔记本)   lid（编号） title（标题）  price（价格） stockcount(库存量)  shelftime(上架时间)
-islndex(是否为首页推荐) eid（编号） ename（名字） sex(性别) birthday(生日) salary（工资）
-book(表) author(作者）  price(价格)  publish(出版社） pubTime(出版时间)  utf8（编码）
-</code></pre><p>3.列约束<br>   MySQL可以对插入的数据进行特定的验证，只有满足条件才允许插入到数据库中，否则被认为是非法的插入。<br>      例如：一个人的性别只能是男或者女，一个人的年龄0~100之间。<br>  （1）主键约束————PRIMARY KEY(主键)<br>       声明了主键列上的值不能出现重复，表中查询的记录会按照主键由小到大排序——加快查找的速度；通常主键添加到编号列中。<br>        注意：一个表中只能有一个主键<br>  （2）唯一约束————UNIQUE(唯一)<br>        声明了唯一约束的列上不能插入重复的值，允许插入NULL，而且允许插入多个NULL<br>        NULL表示空，在插入数据，暂时无法确定要保存的数据。<br>        例如：无法确定员工的姓名、工资。</p>
-<p>课后任务<br>  （1）复习今天内容，重新编写代码<br>  （2）练习：<br>          创建脚本文件xz.sql,创建数据库xz，设置编码ITF8，进入该数据库。<br>          创建保存笔记本分类的表xz_laptop_family(fid、fname,laptopCount 笔记本数量)<br>              10 联想 2    20  戴尔  2    30  小米 3<br>          创建笔记本数据表xz_laptop(lid,title（标题）, price(价格), spec(规格),detail(详细介绍)，shelfTime(上架时间)，isOnsale是否在售，familyid(产品编码)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/04/day03/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day02" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/03/day02/">DAY TWO 关于MYSQL</a>
-    </h1>
   
 
-        
-        <a href="/2018/12/03/day02/" class="archive-article-date">
-  	<time datetime="2018-12-03T12:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如何在项目中保存数据————数据库——单词<br>  1.数据库概述<br>     数据库（database）:以特定的结构批量存储业务数据的软件<br>           网状数据库     层次数据库        关系数据库<br>     关系型数据库逻辑结构(RDBMS)<br>        Server(服务器)——&gt;database(数据库)——&gt;table(表格)——&gt;row(行)——&gt;column(列)<br>          relation  database manage system<br>     SQLite             (微型数据库，常用于移动设备)<br>     MySQL            (开源中小型数据库，可用于各种操作系统)（开源：开放源代码）<br>     PostgreSQL      （开源中小型数据库）<br>     SQL server       (microsoft开发的中型数据库，只用于Windows系统)<br>     Oracle           (oracle公司开发的中大型数据库，可用于各种操作系统（价格昂贵，使用较少）)<br>  2.MySQL数据库<br>      Oracle分支：MySQL<br>      Maitin分支：MariaDB<br>        （xampp是一个服务器的套装，包含多款开源的服务器，例如：MySQL,PHP…）<br>         下载地址：<a href="http://www.apachefriends.org/download.html" target="_blank" rel="noopener">http://www.apachefriends.org/download.html</a><br>        MySQL部署结构<br>                服务器端软件：负责存储/维护数据——银行总行机房<br>                客户端软件：   负责向服务器发起增减查改的命令—ATM机<br>        （1）服务器端<br>               C:\xampp\myaql\bin\masqld.exe   启动文件<br>               C:\xampp\mysql\data          数据文件——人无法看懂<br>        （2）客户端：<br>               C:\xampp\mysql\bin=mysql.exe       客户端软件，用来连接服务器端<br>         (3) 连接MySQL服务器<br>                mysql.exe -h127.0.0.1 -P3306 -uroot -p(此处不加“ ；”)<br>                简写形式      mysql -uroot<br>  3.常用MySQL管理命令<br>          quit                          退出服务器的连接<br>          show  databases；             显示服务器上当前所有的数据<br>          use   数据库名称；             进入指定的数据库<br>          show  tables；                显示当前数据库中所有数据表<br>          desc  表名称；                 描述表中有哪些列<br>  4.MySQL常用的SQL命令<br>          SQL:   Structured  Query  Language,结构化查询语言，用于对关系型数据库服务器中的数据进行曾删改查的操作<br>              SQL语言最早是由IBM提出，后交给了ISO，最终成为了数据库行业的标准语言，分为SQL-87、SQL-92、SQL-99等。<br>              当前标准的SQL命令可以被绝大多数的关系型数据库所支持<br>          SQL命令的两种执行方式<br>              （1）交互模式：客户端输入一行，点击回车，服务器执行一行。适用于临时性的查看数据。<br>                        mysql     -uroot   回车<br>               (2)  脚本模式：客户端把要执行的命令写在一个文本文件中一次性的提交给服务器执行。适用于批量的增删改查。<br>                        mysql   -uroot &lt; C:/xampp/<em>….</em>/01.sql  回车<br>          SQL语法规范<br>              （1）每条SQL语句必须以英文分号结尾，一条语句可以跨越多行，见到分号认为语句结束。<br>              （2）若第n行语句有错误，则此语句以及后续的语句都不能在执行。<br>              （3）SQL命令不区分大小写，习惯上数据库关键字用大写，非关键字用小写<br>              （4）SQL命令还可以使用单行注释：#…,和多行注释：/<em>…</em>/,注释的代码不会被服务器执行。</p>
-<pre><code>日常开发中常用的SQL命令
-    （1）丢弃指定的数据库，如果存在的话
-            DROP  DATABASE IF EXISTS jd；
-    （2）创建新的数据库
-            CREATE  DATABASE  jd ;    
-    （3）进入刚刚创建的数据库
-             USE jd;
-    （4）创建表格
-             CREATE  TABLE  student(
-              sid   INT                      #sid列名称,integer整数
-              name VARCHAR(8),     #variable(可变的) character列类型
-              sex  VARCHAR(1),        #M  F
-               );
-     (5) #向学生表中插入数据         insert into(插入)
-            INSERT INTO  student VALUES(&apos;1&apos;,&apos;tom&apos;,&apos;M&apos;,&apos;80&apos;);
-    （6）修改数据
-            UPDATE  student SET  score=&apos;66&apos;,sex=&apos;F&apos;  WHERE  sid=&apos;2&apos;;
-    （7）删除数据
-           DELETE  FROM  student   WHERE  sid=&apos;3&apos;;
-    （8）查询表中所有的数据        select(查询)    
-            SELECT * FROM dtudent;
-</code></pre><p>课后任务：（1）复习今天的内容<br>              （2）创建脚本文件xz.sql，创建数据库xz，进入该数据库；<br>              （3）创建数据表user，包含uid (编号），uname（用户名），upwd（确认密码），email（电子邮件），phone（电话），sex（性别），                           userName（真实姓名）,registerTime(注册时间）,isOnline(是否在线)<br>                                  插入5条数据，删除其中2条数据，修改2条数据，最后查询结果<br>                                  注册时间‘2018-12-10’</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/03/day02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-内涵段子" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/01/内涵段子/">内涵段子</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/01/内涵段子/" class="archive-article-date">
-  	<time datetime="2018-12-01T07:53:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>馒头、馒头<br>单身狗冬天路面结冰就不要出门了，因为摔倒了会变成….汪汪碎冰冰</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/01/内涵段子/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/01/hello-world/" class="archive-article-date">
-  	<time datetime="2018-12-01T05:34:34.994Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -710,8 +418,8 @@ book(表) author(作者）  price(价格)  publish(出版社） pubTime(出版�
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
