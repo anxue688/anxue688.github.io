@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>泥吃枣药丸</title>
+  <title>Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="沙雕博客">
+  <meta name="description" content="药丸博客">
 <meta name="keywords" content="沙雕欢乐多">
 <meta property="og:type" content="website">
-<meta property="og:title" content="泥吃枣药丸">
+<meta property="og:title" content="Botn to death">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="泥吃枣药丸">
-<meta property="og:description" content="沙雕博客">
+<meta property="og:site_name" content="Botn to death">
+<meta property="og:description" content="药丸博客">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="泥吃枣药丸">
-<meta name="twitter:description" content="沙雕博客">
+<meta name="twitter:title" content="Botn to death">
+<meta name="twitter:description" content="药丸博客">
   
-    <link rel="alternative" href="/atom.xml" title="泥吃枣药丸" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -180,70 +180,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.数据类型<br>         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null<br>              1)数值型<br>                分为整型和浮点型                                                           #typeof类型是<br>                整型在内存中占四个字节，浮点型占8个字节<br>                整型分为8进制(0开头)、10进制、16进制(Ox开头)                                 #’t’.charCodeAt查看任意Unicode编码<br>                浮点型分为指数型和普通                                                       #parseInt解析为整型<br>              2)字符串类型      2.147e9<br>                 数据被引号所包含就是字符串类型，不区分单双引号<br>                 查看某一个字符的Unicode编码     ‘t’.charCodeAt<br>              3)布尔型<br>                 在程序中表示真或者假<br>                  true/false<br>                 常用于一些是否的结果    isVip、isOnsale、isLogin<br>              4)未定义型              #object对象<br>                  声明了一个变量，未赋值结果是undefined<br>              5)空null ——  用于引用数据类型<br>                       检测数据类型     typeof()     ——&gt;     number/string/boolean/undefined/object<br>          （2）引用类型<br>2.数据类型的转换<br>             （1）隐式转换<br>                1)数字+字符串：数字转换成字符串<br>                            1+’a’  //‘1a’<br>                2)数字+布尔型：布尔型转成数字    true-&gt;1   false-&gt;0<br>                                           1+true   //2                   1+false      //1<br>                3)字符串+布尔型：布尔型转成字符串<br>                      ‘a’+true     //  ‘atrue’<br>                4)null的加法<br>                      1+null    //1           null-&gt;0<br>                      true+null    //1      true-&gt;1    null-&gt;0<br>                      ‘a’+null      //‘anull’      null-&gt;’null’<br>                5)  [  -  * /   ]执行运算<br>                   尝试将符号两端的数据转换成数值型（自动调用Number转换），如果无法转换，返回NaN（Not a Number）<br>                   总结：加号的作用<br>                             执行加法的运算；执行字符串的拼接。<br>              （2）强制转换<br>                     ①将数据转成数值型<br>                             Number()<br>                             将任意的数据转换成数值型，如果被转换的字符串中含有非数字在，则返回NaN，布尔型会转换成数值型。<br>                     ②将数据转换成整型<br>                            parseInt(‘1.5’)//1   ==&gt;<br>                            查看数据的开头是否为数字，遇到非数字则返回前边的数字。<br>                            如果开头是数字，则返回NaN。<br>                     ③将数据转成浮点型<br>                            parseFloat()<br>                     ④将字符转换成字符串<br>                            toString()<br>                              var pi=3.14<br>                              pi.toString()<br>3.运算符和表达式——  由运算符连接的操作数据，所组成的形式称为表达式<br>              （1）算数运算符</p>
-<pre><code>          +    -     *     /      %(取余)    ++    --
-          %     取余
-          ++   自增，在原来的基础上加1
-          --     自减，在原来的基础上减1
-          console.log(a++)   先打印a的值，然后再自增
-          console.log(++a)   先自增，然后再打印a的值
-     练习:
-                var  a=3                                                           var b=5;
-                console.log(a++ + ++a );      //8                     console.log(--b + b--);
-                a++先获取a的值(3),执行自增；                         --b 先让b执行自减(4),获取b的值（4）
-                ++a先让a执行自增(5)，然后再获取a                 b-- 先获取b的值(4)，然后再执行自减
-    （2）比较运算符
-            &gt;=  &lt;=  &gt;  &lt;   ==(等于)    !=(不等于)    ===（全等于）   !==(全不等于)
-            返回的结果是布尔型的值
-            ==   只是比较两个数据的值是否相等
-            ===    不仅比较数据，还比较两个数据的类型是否相同
-            3&gt;&apos;10&apos;   //true  数字和字符串比较，字符串转成数值型           
-            &apos;3&apos;&gt;&apos;10&apos;  //true 两个字符串比较，比较的是Unicode码
-            3-&gt;51       1-&gt;49
-            3&gt;&apos;10a&apos;    //false
-            3&lt;&apos;10a&apos;    //false
-            3==&apos;10a&apos;  //false
-            NaN和任意的数字比较(&gt;  &lt;  &gt;=  &lt;=  ==  ===)返回false;
-            NaN=NaN    返回false
-   （3）逻辑运算符
-            ||    或者       &amp;&amp;    并且     ！非                                                            
-            ||          关联的两个条件只需要满足其一，结果就是true，否则false
-            &amp;&amp;      关联的两个条件都满足，结果是true，否则false
-            ！   取反
-       逻辑短路 
-            ||     当第一个条件为true的时候，就不需要执行第二个条件
-            &amp;&amp; 当第一个条件为false的时候，就不需要执行第二个条件                                   
-      练习：下边的代码是否会报错
-             var a=3;
-             a&gt;5    &amp;&amp;    console.log(ename);    不会报错
-             a&lt;1    ||        console.log(ename);     会报错 
-    （4）位运算符
-             将数据转成二进制然后执行
-             1   10  11  100  101  110  111  1000  1001
-              101101=100000+1000+100+1     
-                               32    +   8  +   4  +  1           
-           按位与（&amp;） ——上下两位都是1，结果是1 ，否则是0.
-           按位或（|）   ——上下两位含有1 ，结果是1，否则是0.
-           按位异或(^)  ——上下两位相同是0，不同是1.
-           按位右移(&gt;&gt;)——删除二进制的最后n位，大概是变小到原来的一半
-           按位左移(&lt;&lt;)——在二进制的最后添加0，变大到原来的一倍
-              011 
-              101  
-              001 
-          练习：5&amp;9     8|10     6^12
-                1                10           10  
-          0101             1000       0110
-          1001             1010       1100
-                1             1010       1010
-     （5）赋值运算符
-              =    +=   -=    *=   /=    %=
-                 在原来的基础上进行加减乘除取余                               
+        <p>1.数据类型<br>         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null<br>              1)数值型<br>                分为整型和浮点型                                                           #typeof类型是<br>                整型在内存中占四个字节，浮点型占8个字节<br>                整型分为8进制(0开头)、10进制、16进制(Ox开头)                                 #’t’.charCodeAt查看任意Unicode编码<br>                浮点型分为指数型和普通                                                       #parseInt解析为整型<br>              2)字符串类型      2.147e9<br>                 数据被引号所包含就是字符串类型，不区分单双引号<br>                 查看某一个字符的Unicode编码     ‘t’.charCodeAt<br>              3)布尔型<br>                 在程序中表示真或者假<br>                  true/false<br>                 常用于一些是否的结果    isVip、isOnsale、isLogin<br>              4)未定义型              #object对象<br>                  声明了一个变量，未赋值结果是undefined<br>              5)空null ——  用于引用数据类型<br>                       检测数据类型     typeof()     ——&gt;     number/string/boolean/undefined/object<br>          （2）引用类型<br>2.数据类型的转换<br>             （1）隐式转换<br>                1)数字+字符串：数字转换成字符串<br>                            1+’a’  //‘1a’<br>                2)数字+布尔型：布尔型转成数字    true-&gt;1   false-&gt;0<br>                                           1+true   //2                   1+false      //1<br>                3)字符串+布尔型：布尔型转成字符串<br>                      ‘a’+true     //  ‘atrue’<br>                4)null的加法<br>                      1+null    //1           null-&gt;0<br>                      true+null    //1      true-&gt;1    null-&gt;0<br>                      ‘a’+null      //‘anull’      null-&gt;’null’<br>                5)  [  -  * /   ]执行运算<br>                   尝试将符号两端的数据转换成数值型（自动调用Number转换），如果无法转换，返回NaN（Not a Number）<br>                   总结：加号的作用<br>                             执行加法的运算；执行字符串的拼接。<br>              （2）强制转换<br>                     ①将数据转成数值型<br>                             Number()<br>                             将任意的数据转换成数值型，如果被转换的字符串中含有非数字在，则返回NaN，布尔型会转换成数值型。<br>                     ②将数据转换成整型<br>                            parseInt(‘1.5’)//1   ==&gt;<br>                            查看数据的开头是否为数字，遇到非数字则返回前边的数字。<br>                            如果开头是数字，则返回NaN。<br>                     ③将数据转成浮点型<br>                            parseFloat()<br>                     ④将字符转换成字符串<br>                            toString()<br>                              var pi=3.14<br>                              pi.toString()<br>3.运算符和表达式——  由运算符连接的操作数据，所组成的形式称为表达式</p>
+<pre><code>         （1）算数运算符
+                +    -     *     /      %(取余)    ++    --
+                %     取余
+                ++   自增，在原来的基础上加1
+                --     自减，在原来的基础上减1
+                console.log(a++)   先打印a的值，然后再自增
+                console.log(++a)   先自增，然后再打印a的值
+                练习:
+                      var  a=3                                                           var b=5;
+                      console.log(a++ + ++a );      //8                     console.log(--b + b--);
+                      a++先获取a的值(3),执行自增；                         --b 先让b执行自减(4),获取b的值（4）
+                      ++a先让a执行自增(5)，然后再获取a                 b-- 先获取b的值(4)，然后再执行自减
+          （2）比较运算符
+                  &gt;=  &lt;=  &gt;  &lt;   ==(等于)    !=(不等于)    ===（全等于）   !==(全不等于)
+                  返回的结果是布尔型的值
+                  ==   只是比较两个数据的值是否相等
+                  ===    不仅比较数据，还比较两个数据的类型是否相同
+                  3&gt;&apos;10&apos;   //true  数字和字符串比较，字符串转成数值型           
+                  &apos;3&apos;&gt;&apos;10&apos;  //true 两个字符串比较，比较的是Unicode码
+                  3-&gt;51       1-&gt;49
+                  3&gt;&apos;10a&apos;    //false
+                  3&lt;&apos;10a&apos;    //false
+                  3==&apos;10a&apos;  //false
+                  NaN和任意的数字比较(&gt;  &lt;  &gt;=  &lt;=  ==  ===)返回false;
+                  NaN=NaN    返回false
+         （3）逻辑运算符
+                  ||    或者       &amp;&amp;    并且     ！非                                                            
+                  ||          关联的两个条件只需要满足其一，结果就是true，否则false
+                  &amp;&amp;      关联的两个条件都满足，结果是true，否则false
+                  ！   取反
+             逻辑短路 
+                  ||     当第一个条件为true的时候，就不需要执行第二个条件
+                  &amp;&amp; 当第一个条件为false的时候，就不需要执行第二个条件                                   
+            练习：下边的代码是否会报错
+                   var a=3;
+                   a&gt;5    &amp;&amp;    console.log(ename);    不会报错
+                   a&lt;1    ||        console.log(ename);     会报错 
+          （4）位运算符
+                   将数据转成二进制然后执行
+                   1   10  11  100  101  110  111  1000  1001
+                    101101=100000+1000+100+1     
+                                     32    +   8  +   4  +  1           
+                 按位与（&amp;） ——上下两位都是1，结果是1 ，否则是0.
+                 按位或（|）   ——上下两位含有1 ，结果是1，否则是0.
+                 按位异或(^)  ——上下两位相同是0，不同是1.
+                 按位右移(&gt;&gt;)——删除二进制的最后n位，大概是变小到原来的一半
+                 按位左移(&lt;&lt;)——在二进制的最后添加0，变大到原来的一倍
+                    011 
+                    101  
+                    001 
+                练习：5&amp;9     8|10     6^12
+                      1                10           10  
+                0101             1000       0110
+                1001             1010       1100
+                      1             1010       1010
+           （5）赋值运算符
+                    =    +=   -=    *=   /=    %=
+                       在原来的基础上进行加减乘除取余
 
 课后任务：
-       （1）复习今天内容，整理思维导图
-       （2）练习：声明一个变量保存年份，如果是闰年，打印‘是闰年’（逻辑短路）
-               闰年标准：4年一个闰年（能被4整除），并且不能被100整除；或者能被400整除
-       （3）预习逻辑结构（if   if-else   if-else嵌套）
+             （1）复习今天内容，整理思维导图
+             （2）练习：声明一个变量保存年份，如果是闰年，打印‘是闰年’（逻辑短路）
+                     闰年标准：4年一个闰年（能被4整除），并且不能被100整除；或者能被400整除
+             （3）预习逻辑结构（if   if-else   if-else嵌套）
 </code></pre>
       
 
