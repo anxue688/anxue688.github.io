@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据的转换和运算符的表达 | Botn to death</title>
+  <title>逻辑结构（上） | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.数据类型         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null              1)数值型                分为整型和浮点型                                                           #typeof类型是                整型在内存中占四个字节，浮点">
+  <meta name="description" content="1.运算符——三目运算符          由三个运算的数据或表达式组成的结构   （1）条件表达式 ？表达式1 : 表达式2                  如果条件表达式为true，执行表达式1；                  如果条件表达式为false，执行表达式2；2.两个浏览器端函数          alert() 弹出警示框          prompt() 弹出提示(输入)">
 <meta name="keywords" content="沙雕欢乐多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据的转换和运算符的表达">
-<meta property="og:url" content="http://yoursite.com/2018/12/07/day06/index.html">
+<meta property="og:title" content="逻辑结构（上）">
+<meta property="og:url" content="http://yoursite.com/2018/12/11/day07/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="1.数据类型         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null              1)数值型                分为整型和浮点型                                                           #typeof类型是                整型在内存中占四个字节，浮点">
+<meta property="og:description" content="1.运算符——三目运算符          由三个运算的数据或表达式组成的结构   （1）条件表达式 ？表达式1 : 表达式2                  如果条件表达式为true，执行表达式1；                  如果条件表达式为false，执行表达式2；2.两个浏览器端函数          alert() 弹出警示框          prompt() 弹出提示(输入)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-07T10:53:53.889Z">
+<meta property="og:updated_time" content="2018-12-11T11:40:19.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据的转换和运算符的表达">
-<meta name="twitter:description" content="1.数据类型         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null              1)数值型                分为整型和浮点型                                                           #typeof类型是                整型在内存中占四个字节，浮点">
+<meta name="twitter:title" content="逻辑结构（上）">
+<meta name="twitter:description" content="1.运算符——三目运算符          由三个运算的数据或表达式组成的结构   （1）条件表达式 ？表达式1 : 表达式2                  如果条件表达式为true，执行表达式1；                  如果条件表达式为false，执行表达式2；2.两个浏览器端函数          alert() 弹出警示框          prompt() 弹出提示(输入)">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -159,91 +159,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-day06" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-day07" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据的转换和运算符的表达
+      逻辑结构（上）
     </h1>
   
 
         
-        <a href="/2018/12/07/day06/" class="archive-article-date">
-  	<time datetime="2018-12-07T10:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
+        <a href="/2018/12/11/day07/" class="archive-article-date">
+  	<time datetime="2018-12-11T11:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.数据类型<br>         （1）原始类型：分为数值型、字符串型、布尔型、未定义型（undefined）、null<br>              1)数值型<br>                分为整型和浮点型                                                           #typeof类型是<br>                整型在内存中占四个字节，浮点型占8个字节<br>                整型分为8进制(0开头)、10进制、16进制(Ox开头)                                 #’t’.charCodeAt查看任意Unicode编码<br>                浮点型分为指数型和普通                                                       #parseInt解析为整型<br>              2)字符串类型      2.147e9<br>                 数据被引号所包含就是字符串类型，不区分单双引号<br>                 查看某一个字符的Unicode编码     ‘t’.charCodeAt<br>              3)布尔型<br>                 在程序中表示真或者假<br>                  true/false<br>                 常用于一些是否的结果    isVip、isOnsale、isLogin<br>              4)未定义型              #object对象<br>                  声明了一个变量，未赋值结果是undefined<br>              5)空null ——  用于引用数据类型<br>                       检测数据类型     typeof()     ——&gt;     number/string/boolean/undefined/object<br>          （2）引用类型<br>2.数据类型的转换<br>             （1）隐式转换<br>                1)数字+字符串：数字转换成字符串<br>                            1+’a’  //‘1a’<br>                2)数字+布尔型：布尔型转成数字    true-&gt;1   false-&gt;0<br>                                           1+true   //2                   1+false      //1<br>                3)字符串+布尔型：布尔型转成字符串<br>                      ‘a’+true     //  ‘atrue’<br>                4)null的加法<br>                      1+null    //1           null-&gt;0<br>                      true+null    //1      true-&gt;1    null-&gt;0<br>                      ‘a’+null      //‘anull’      null-&gt;’null’<br>                5)  [  -  * /   ]执行运算<br>                   尝试将符号两端的数据转换成数值型（自动调用Number转换），如果无法转换，返回NaN（Not a Number）<br>                   总结：加号的作用<br>                             执行加法的运算；执行字符串的拼接。<br>              （2）强制转换<br>                     ①将数据转成数值型<br>                             Number()<br>                             将任意的数据转换成数值型，如果被转换的字符串中含有非数字在，则返回NaN，布尔型会转换成数值型。<br>                     ②将数据转换成整型<br>                            parseInt(‘1.5’)//1   ==&gt;<br>                            查看数据的开头是否为数字，遇到非数字则返回前边的数字。<br>                            如果开头是数字，则返回NaN。<br>                     ③将数据转成浮点型<br>                            parseFloat()<br>                     ④将字符转换成字符串<br>                            toString()<br>                              var pi=3.14<br>                              pi.toString()<br>3.运算符和表达式——  由运算符连接的操作数据，所组成的形式称为表达式</p>
-<pre><code>         （1）算数运算符
-                +    -     *     /      %(取余)    ++    --
-                %     取余
-                ++   自增，在原来的基础上加1
-                --     自减，在原来的基础上减1
-                console.log(a++)   先打印a的值，然后再自增
-                console.log(++a)   先自增，然后再打印a的值
-                练习:
-                      var  a=3                                                           var b=5;
-                      console.log(a++ + ++a );      //8                     console.log(--b + b--);
-                      a++先获取a的值(3),执行自增；                         --b 先让b执行自减(4),获取b的值（4）
-                      ++a先让a执行自增(5)，然后再获取a                 b-- 先获取b的值(4)，然后再执行自减
-          （2）比较运算符
-                  &gt;=  &lt;=  &gt;  &lt;   ==(等于)    !=(不等于)    ===（全等于）   !==(全不等于)
-                  返回的结果是布尔型的值
-                  ==   只是比较两个数据的值是否相等
-                  ===    不仅比较数据，还比较两个数据的类型是否相同
-                  3&gt;&apos;10&apos;   //true  数字和字符串比较，字符串转成数值型           
-                  &apos;3&apos;&gt;&apos;10&apos;  //true 两个字符串比较，比较的是Unicode码
-                  3-&gt;51       1-&gt;49
-                  3&gt;&apos;10a&apos;    //false
-                  3&lt;&apos;10a&apos;    //false
-                  3==&apos;10a&apos;  //false
-                  NaN和任意的数字比较(&gt;  &lt;  &gt;=  &lt;=  ==  ===)返回false;
-                  NaN=NaN    返回false
-         （3）逻辑运算符
-                  ||    或者       &amp;&amp;    并且     ！非                                                            
-                  ||          关联的两个条件只需要满足其一，结果就是true，否则false
-                  &amp;&amp;      关联的两个条件都满足，结果是true，否则false
-                  ！   取反
-             逻辑短路 
-                  ||     当第一个条件为true的时候，就不需要执行第二个条件
-                  &amp;&amp; 当第一个条件为false的时候，就不需要执行第二个条件                                   
-            练习：下边的代码是否会报错
-                   var a=3;
-                   a&gt;5    &amp;&amp;    console.log(ename);    不会报错
-                   a&lt;1    ||        console.log(ename);     会报错 
-          （4）位运算符
-                   将数据转成二进制然后执行
-                   1   10  11  100  101  110  111  1000  1001
-                    101101=100000+1000+100+1     
-                                     32    +   8  +   4  +  1           
-                 按位与（&amp;） ——上下两位都是1，结果是1 ，否则是0.
-                 按位或（|）   ——上下两位含有1 ，结果是1，否则是0.
-                 按位异或(^)  ——上下两位相同是0，不同是1.
-                 按位右移(&gt;&gt;)——删除二进制的最后n位，大概是变小到原来的一半
-                 按位左移(&lt;&lt;)——在二进制的最后添加0，变大到原来的一倍
-                    011 
-                    101  
-                    001 
-                练习：5&amp;9     8|10     6^12
-                      1                10           10  
-                0101             1000       0110
-                1001             1010       1100
-                      1             1010       1010
-           （5）赋值运算符
-                    =    +=   -=    *=   /=    %=
-                       在原来的基础上进行加减乘除取余
+        <p>1.运算符——三目运算符<br>          由三个运算的数据或表达式组成的结构<br>   （1）条件表达式 ？表达式1 : 表达式2<br>                  如果条件表达式为true，执行表达式1；<br>                  如果条件表达式为false，执行表达式2；<br>2.两个浏览器端函数<br>          alert() 弹出警示框<br>          prompt() 弹出提示(输入)框，输入的值是字符串类型<br>3.逻辑结构<br>   （1）流程控制<br>                   程序=数据+算法<br>                      程序分为顺序执行、选择执行、循环执行<br>        1）if语句<br>                                           语句1；<br>                                  if（条件表达式）{<br>                                           语句2；<br>                                  }<br>                                           语句3；</p>
+<pre><code>          ①执行语句1
+          ②如果条件表达式为true，执行语句2
+          ③执行语句3
+2）if-else语句
+                                语句1；    
+                         if(条件表达式){
+                                语句2；
+                         }else if{
+                                语句3；
+                         }else
+                                语句4；
+           ①执行语句1
+           ②执行条件表达式，如果是true，执行语句2，如果是false，会执行语句3
+           ③执行语句4
+     练习1：声明变量保存成绩，如果超过60分，打印及格，否则不及格
+     练习2：声明两个变量存储账号和密码，如果账号是root，并且密码是123456，打印登录成功；否则打印登录失败
+            如果if和else后的大括号中只有一行代码，则大括号可以省略
+               if(score&gt;=)60   console.log(&apos;及格&apos;)；
+           条件表达式中几个特殊的情况
+               undefined、null、0、&apos;&apos;、NaN在条件表达式中都表示false
+3）if-else嵌套
+           用于判断多种情况
+                  语句0；
+            if(条件表达式1){
+                  语句1；
+            }else if(条件表达式2){
+                  语句3；
+            }else ...if(条件表达式n){ 循环的两个要素
+              ①循环的条件：控制循环次数
+              ②循环体：重复执行的相同或者相似代码
+         while循环
+                while(循环条件){
+                    循环体
+                  语句n；
+            }else{
+                   语句n+1；   //以上所有的条件表达式均为false
+            }
+         执行过程：
+        ①执行语句0
+        ②执行条件表达式1
+           如果条件表达式1为true，执行语句1
+           如果条件表达式1为false，执行语句2
+           如果条件表达式2为false，执行语句3
+           如果条件表达式2为false，执行语句n
+       ③如果以上所有的条件表达式都为false，执行语句n+1
+4）switch-case
+         和if-else类似，是一种特殊的多项分支语句
+                  语句0；
+            switch(表达式){
+               case1:     //如果表达式的值为1       
+                  语句1...
+               break；
+                   ....
+               case n:
+                 语句n...
+               break;
+               default：      //默认值
+                  语句n+1;     //以上所有的条件都是false
+            }
 
-课后任务：
-             （1）复习今天内容，整理思维导图
-             （2）练习：声明一个变量保存年份，如果是闰年，打印‘是闰年’（逻辑短路）
-                     闰年标准：4年一个闰年（能被4整除），并且不能被100整除；或者能被400整除
-             （3）预习逻辑结构（if   if-else   if-else嵌套）
+        说明：在表达式和case中的值比较的时候使用的是全等于（===）。
+        对比if-else嵌套和switch-case语句
+            相同点：两者都可以用于多项分支语句
+            不同点：if-else既可以判断相等，又可以判断不相等  ，适用范围比较广；
+                         switch-case只适用于全等的情况； 在结构上更为清晰合理，执行效率相对较高。             
+5）循环执行
+              循环：就是一遍又一遍执行相同或者相似的代码
+              循环的两个要素
+              ①循环的条件：控制循环次数
+              ②循环体：重复执行的相同或者相似代码
+         while循环
+                while(循环条件){
+                    循环体
+                }                 
+   课后任务：（1）复习今天内容，整理思维导图
+                    （2）练习：
+                             使用switch-case判断一个人的成绩标准（让分数/10，取整）
+                               100   90~100以下    80~90以下
+                           使用循环打印10~1
+                           使用循环打印20 22 24 26 28 30
+                     （3）预习do-while、for循环       
+
+                 #parseInt   取整      cls  清除
 </code></pre>
       
 
@@ -323,7 +342,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/07/day06/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/11/day07/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -337,18 +356,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/11/day07/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          逻辑结构（上）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/06/day05/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL复杂查询以及JS(javaScript)定义与开发</div>
+    <a href="/2018/12/07/day06/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据的转换和运算符的表达</div>
       <i class="icon-circle-right"></i>
     </a>
   

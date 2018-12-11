@@ -160,6 +160,152 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day07" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/11/day07/">逻辑结构（上）</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/11/day07/" class="archive-article-date">
+  	<time datetime="2018-12-11T11:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.运算符——三目运算符<br>          由三个运算的数据或表达式组成的结构<br>   （1）条件表达式 ？表达式1 : 表达式2<br>                  如果条件表达式为true，执行表达式1；<br>                  如果条件表达式为false，执行表达式2；<br>2.两个浏览器端函数<br>          alert() 弹出警示框<br>          prompt() 弹出提示(输入)框，输入的值是字符串类型<br>3.逻辑结构<br>   （1）流程控制<br>                   程序=数据+算法<br>                      程序分为顺序执行、选择执行、循环执行<br>        1）if语句<br>                                           语句1；<br>                                  if（条件表达式）{<br>                                           语句2；<br>                                  }<br>                                           语句3；</p>
+<pre><code>          ①执行语句1
+          ②如果条件表达式为true，执行语句2
+          ③执行语句3
+2）if-else语句
+                                语句1；    
+                         if(条件表达式){
+                                语句2；
+                         }else if{
+                                语句3；
+                         }else
+                                语句4；
+           ①执行语句1
+           ②执行条件表达式，如果是true，执行语句2，如果是false，会执行语句3
+           ③执行语句4
+     练习1：声明变量保存成绩，如果超过60分，打印及格，否则不及格
+     练习2：声明两个变量存储账号和密码，如果账号是root，并且密码是123456，打印登录成功；否则打印登录失败
+            如果if和else后的大括号中只有一行代码，则大括号可以省略
+               if(score&gt;=)60   console.log(&apos;及格&apos;)；
+           条件表达式中几个特殊的情况
+               undefined、null、0、&apos;&apos;、NaN在条件表达式中都表示false
+3）if-else嵌套
+           用于判断多种情况
+                  语句0；
+            if(条件表达式1){
+                  语句1；
+            }else if(条件表达式2){
+                  语句3；
+            }else ...if(条件表达式n){ 循环的两个要素
+              ①循环的条件：控制循环次数
+              ②循环体：重复执行的相同或者相似代码
+         while循环
+                while(循环条件){
+                    循环体
+                  语句n；
+            }else{
+                   语句n+1；   //以上所有的条件表达式均为false
+            }
+         执行过程：
+        ①执行语句0
+        ②执行条件表达式1
+           如果条件表达式1为true，执行语句1
+           如果条件表达式1为false，执行语句2
+           如果条件表达式2为false，执行语句3
+           如果条件表达式2为false，执行语句n
+       ③如果以上所有的条件表达式都为false，执行语句n+1
+4）switch-case
+         和if-else类似，是一种特殊的多项分支语句
+                  语句0；
+            switch(表达式){
+               case1:     //如果表达式的值为1       
+                  语句1...
+               break；
+                   ....
+               case n:
+                 语句n...
+               break;
+               default：      //默认值
+                  语句n+1;     //以上所有的条件都是false
+            }
+
+        说明：在表达式和case中的值比较的时候使用的是全等于（===）。
+        对比if-else嵌套和switch-case语句
+            相同点：两者都可以用于多项分支语句
+            不同点：if-else既可以判断相等，又可以判断不相等  ，适用范围比较广；
+                         switch-case只适用于全等的情况； 在结构上更为清晰合理，执行效率相对较高。             
+5）循环执行
+              循环：就是一遍又一遍执行相同或者相似的代码
+              循环的两个要素
+              ①循环的条件：控制循环次数
+              ②循环体：重复执行的相同或者相似代码
+         while循环
+                while(循环条件){
+                    循环体
+                }                 
+   课后任务：（1）复习今天内容，整理思维导图
+                    （2）练习：
+                             使用switch-case判断一个人的成绩标准（让分数/10，取整）
+                               100   90~100以下    80~90以下
+                           使用循环打印10~1
+                           使用循环打印20 22 24 26 28 30
+                     （3）预习do-while、for循环       
+
+                 #parseInt   取整      cls  清除
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/11/day07/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day06" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -880,7 +1026,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://htmler.github.io:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
@@ -911,7 +1057,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家~</div>
   	  	
     	</section>
     
