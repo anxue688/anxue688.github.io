@@ -160,6 +160,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day09" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/12/day09/">day09</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/12/day09/" class="archive-article-date">
+  	<time datetime="2018-12-12T11:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>#99乘法表倒序                   #  9*9=81 8*9=72 7*9=63 6*9=54 5*9=45 4*9=36 3*9=27 2*9=18 1*9=9     
+//外层循环：控制循环的行数9~1    #  8*8=64 7*8=56 6*8=48 5*8=40 4*8=32 3*8=24 2*8=16 1*8=8
+for(var j=9;j&gt;=1;j--){         #  7*7=49 6*7=42 5*7=35 4*7=28 3*7=21 2*7=14 1*7=7
+//内层循环：控制循环的列数       #  6*6=36 5*6=30 4*6=24 3*6=18 2*6=12 1*6=6
+//初始值是由行号来决定的         #  5*5=25 4*5=20 3*5=15 2*5=10 1*5=5
+for(var i=j,str=&apos;&apos;;i&gt;=1;i--){  #  4*4=16 3*4=12 2*4=8 1*4=4
+str+=i+&apos;*&apos;+j+&apos;=&apos;+(i*j)+&apos; &apos;;    #  3*3=9 2*3=6 1*3=3
+}                              #  2*2=4 1*2=2
+console.log(str);              #  1*1=1
+}
+</code></pre><p>1.函数<br>parseInt()/parseFloat()/alert()/prompt()/Number()…<br>分为系统函数和自定义函数<br>函数(Function):有时也被称为方法，是一段预定义好的，并可以被反复使用的代码块。<br>  （1）创建普通函数<br>         function 函数名称(){函数体——封装反复使用的代码块}<br>         调用：函数名称()    //形参——用于接收数据<br>  （2）创建带有参数的函数    #param参数<br>         (return返回，函数执行完所得到的结果  console.log执行中，不返回执行结果)<br>         function函数名称(参数){函数体——封装反复使用的代码块}<br>         调用：函数名称(参数列表);//实参——实际传递的数据<br>         参数列表：可以是0个或者是多个,之间用逗号隔开;创建时的参数称为形参(形式上的参数),<br>               调用时的参数称为实参(实际的参数)，调用的时候,实参的值会按顺序赋给形参<br>       形参本质上就是变量,只能在函数内部使用。<br>       练习：创建函数getSum，传递一个参数，计算1~任意数字之间的和<br>       练习：创建函数getRun，传递2个参数，打印任意两个年份之间所有的闰年<br>  （3）带有返回值的函数<br>         function函数名称(参数列表){<br>                函数体<br>                return 返回值<br>         }<br>         调用：函数名称(参数列表)<br>     return表示函数调用后，返回的结果。<br>      注意：如果函数中没有写return（返回值）或者return后没有任何的值，默认返回undefined<br>            如果return后函数体中所有代码都不能够被执行（一般都在函数中使用，尽量不要在函数外使用）<br>       练习：创建函数getMax,传递2个参数,返回最大值<br>       练习：创建函数isRun，传递一个参数(年份),返回是否为闰年，是返回true，不是闰年返回false<br>       练习：创建函数getStatus,传递1个参数(订单状态码),返回对应的中文。<br>              1~代付款  2~代发货 3~运输中 4~已签收 5~已取消 其他~无法查看</p>
+<p>2.作用域<br>    就是变量和函数的可访问范围<br>    分为全局作用域和局部(函数)作用域<br>    全局作用域：可以在代码的任何地方都能够访问。<br>    局部(函数)作用域：只是局限在函数的内部访问。<br>    （1）变量声明提升  （<strong><em>这是重点，要考的</em></strong>）<br>         JS程序执行前，在当前作用域下使用var声明的变量会提升到最前边，但赋值还是在原来的位置<br>    （2）函数的提升    fun()函数调用后的返回结果    fun表示函数的名称<br>         函数和变量一样，在js程序执行前，把使用function关键字创建的函数提升到最前边<br>       注意：如果函数名和变量名一致，变量会覆盖函数；（先提升函数，再提升变量）</p>
+<p>3.递归(了解)<br>    在函数的内部调用自身<br>    递归在使用的时候需要有结束条件，结合return<br>    斐波那契数列——1 1 2 3 5 8 13 21 34…<br>    课后任务：（1）复习今天内容，整理思维导图<br>              （2）使用递归计算斐波那契数列的第n项<br>          （3）预习JS中的对象</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/12/day09/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day08" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -180,16 +255,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.break关键字<br>        可以结束任何形式的循环<br>        练习：使用变量保存1个数字，循环弹出提示框输入数字，如果数字猜大了，<br>        弹出警示框提示‘big’，如果数字猜小了，用、弹出警示框‘small’，否则提示‘right’，结束循环<br>2.do-while循环<br>     do{<br>     循环体<br>     }while(循环条件);<br>       循环方式：先执行一次循环体，无论循环条件是否为true<br>       //练习：声明一个变量保存密码‘123456’，循环弹出提示框输入密码，<br>       如果输入正确，弹出警示框提示‘login succes’，结束循环<br>3.for循环     ①初始值②循环条件③如何变化<br>     for(①;②;③){<br>       循环体<br>     }<br>     练习：  (1)计算1~100之间所有数字的和<br>            (2)打印50~20之间所有的奇数<br>     如果循环条件有多个，则最后一个起作用   continue  继续<br>4.break和continue<br>     break：结束循环，后续不会再执行其他的循环<br>      continue：跳过本次循环，继续执行下一次循环。<br>5.循环嵌套<br>      while、do-while、for循环之间可以相互嵌套</p>
-<pre><code>#99乘法表正序                                                                                                         #99乘法表倒序
-</code></pre><p> //外层循环，循环行数9次                  内层循环，控制循环的行数 j——行号            //外层循环，循环行数9次<br>    for(var j=1;j&lt;=9;j++){                                                                                       for(var j=1;j&lt;=9;j++){<br> //内层循环，循环列数                     外层循环 控制循环的列数   i——列号          //内层循环，循环列数<br>    for(var i=1,str=’’;i&lt;=j;i++){                                                                               for(var i=1,str=’’;i&lt;=j;i++){<br>         str+=i+’<em>‘+j+’=’+(i</em>j)+’ ‘;                                                                             str+=i+’<em>‘+j+’=’+(i</em>j)+’ ‘;<br>    }console.log(str);                                                                                               }console.log(str);<br> }                                                                                                                         }</p>
-<pre><code>课后任务：
-（1）复习今天内容，整理思维导图
-（2）练习：打印倒着的99乘法表
-（3）计算1~100之间的和，当和大于4000的时候，结束循环，打印当前和是多少
-    《javascript高级程序设计》第三版   红宝石
-    《javascript权威指南》       第六版   犀牛书
-</code></pre>
+        <p>1.break关键字<br>        可以结束任何形式的循环<br>        练习：使用变量保存1个数字，循环弹出提示框输入数字，如果数字猜大了，<br>        弹出警示框提示‘big’，如果数字猜小了，用、弹出警示框‘small’，否则提示‘right’，结束循环<br>2.do-while循环<br>     do{<br>     循环体<br>     }while(循环条件);<br>       循环方式：先执行一次循环体，无论循环条件是否为true<br>       //练习：声明一个变量保存密码‘123456’，循环弹出提示框输入密码，<br>       如果输入正确，弹出警示框提示‘login succes’，结束循环<br>3.for循环     ①初始值②循环条件③如何变化<br>     for(①;②;③){<br>       循环体<br>     }<br>     练习：  (1)计算1~100之间所有数字的和<br>            (2)打印50~20之间所有的奇数<br>     如果循环条件有多个，则最后一个起作用   continue  继续<br>4.break和continue<br>     break：结束循环，后续不会再执行其他的循环<br>      continue：跳过本次循环，继续执行下一次循环。<br>5.循环嵌套</p>
+<pre><code>  while、do-while、for循环之间可以相互嵌套  //内层循环，控制循环的行数 j——行号 // 外层循环 控制循环的列数  i——列号 
+    #99乘法表正序                      ②       #99乘法表倒序
+//外层循环，循环行数9次                 ②  //外层循环，循环行数9次     
+for(var j=1;j&lt;=9;j++){                ② for(var j=1;j&lt;=9;j++){
+//内层循环，循环列数                    ② //内层循环，循环列数 
+for(var i=1,str=&apos;&apos;;i&lt;=j;i++){         ② for(var i=1,str=&apos;&apos;;i&lt;=j;i++){
+str+=i+&apos; * &apos;+j+&apos;=&apos;+(i * j)+&apos; &apos;;       ②  str+=i+&apos; * &apos;+j+&apos;=&apos;+(i * j)+&apos; &apos;;
+}console.log(str);                    ②  }console.log(str);
+}                                     ②  }
+</code></pre><p> 课后任务：<br>    （1）复习今天内容，整理思维导图<br>    （2）练习：打印倒着的99乘法表<br>    （3）计算1~100之间的和，当和大于4000的时候，结束循环，打印当前和是多少<br>        《javascript高级程序设计》第三版   红宝石<br>        《javascript权威指南》       第六版   犀牛书</p>
+
       
 
       
