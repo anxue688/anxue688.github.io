@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day09 | Botn to death</title>
+  <title>函数类型及其作用域 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#99乘法表倒序                   #  9*9=81 8*9=72 7*9=63 6*9=54 5*9=45 4*9=36 3*9=27 2*9=18 1*9=9      //外层循环：控制循环的行数9~1    #  8*8=64 7*8=56 6*8=48 5*8=40 4*8=32 3*8=24 2*8=16 1*8=8 for(var j=9;j&amp;gt;=1;j--)">
 <meta name="keywords" content="沙雕欢乐多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day09">
+<meta property="og:title" content="函数类型及其作用域">
 <meta property="og:url" content="http://yoursite.com/2018/12/12/day09/index.html">
 <meta property="og:site_name" content="Botn to death">
 <meta property="og:description" content="#99乘法表倒序                   #  9*9=81 8*9=72 7*9=63 6*9=54 5*9=45 4*9=36 3*9=27 2*9=18 1*9=9      //外层循环：控制循环的行数9~1    #  8*8=64 7*8=56 6*8=48 5*8=40 4*8=32 3*8=24 2*8=16 1*8=8 for(var j=9;j&amp;gt;=1;j--)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-12T11:10:57.401Z">
+<meta property="og:updated_time" content="2018-12-12T11:14:04.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="day09">
+<meta name="twitter:title" content="函数类型及其作用域">
 <meta name="twitter:description" content="#99乘法表倒序                   #  9*9=81 8*9=72 7*9=63 6*9=54 5*9=45 4*9=36 3*9=27 2*9=18 1*9=9      //外层循环：控制循环的行数9~1    #  8*8=64 7*8=56 6*8=48 5*8=40 4*8=32 3*8=24 2*8=16 1*8=8 for(var j=9;j&amp;gt;=1;j--)">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
@@ -166,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      day09
+      函数类型及其作用域
     </h1>
   
 
@@ -190,8 +190,17 @@ str+=i+&apos;*&apos;+j+&apos;=&apos;+(i*j)+&apos; &apos;;    #  3*3=9 2*3=6 1*3=
 console.log(str);              #  1*1=1
 }
 </code></pre><p>1.函数<br>parseInt()/parseFloat()/alert()/prompt()/Number()…<br>分为系统函数和自定义函数<br>函数(Function):有时也被称为方法，是一段预定义好的，并可以被反复使用的代码块。<br>  （1）创建普通函数<br>         function 函数名称(){函数体——封装反复使用的代码块}<br>         调用：函数名称()    //形参——用于接收数据<br>  （2）创建带有参数的函数    #param参数<br>         (return返回，函数执行完所得到的结果  console.log执行中，不返回执行结果)<br>         function函数名称(参数){函数体——封装反复使用的代码块}<br>         调用：函数名称(参数列表);//实参——实际传递的数据<br>         参数列表：可以是0个或者是多个,之间用逗号隔开;创建时的参数称为形参(形式上的参数),<br>               调用时的参数称为实参(实际的参数)，调用的时候,实参的值会按顺序赋给形参<br>       形参本质上就是变量,只能在函数内部使用。<br>       练习：创建函数getSum，传递一个参数，计算1~任意数字之间的和<br>       练习：创建函数getRun，传递2个参数，打印任意两个年份之间所有的闰年<br>  （3）带有返回值的函数<br>         function函数名称(参数列表){<br>                函数体<br>                return 返回值<br>         }<br>         调用：函数名称(参数列表)<br>     return表示函数调用后，返回的结果。<br>      注意：如果函数中没有写return（返回值）或者return后没有任何的值，默认返回undefined<br>            如果return后函数体中所有代码都不能够被执行（一般都在函数中使用，尽量不要在函数外使用）<br>       练习：创建函数getMax,传递2个参数,返回最大值<br>       练习：创建函数isRun，传递一个参数(年份),返回是否为闰年，是返回true，不是闰年返回false<br>       练习：创建函数getStatus,传递1个参数(订单状态码),返回对应的中文。<br>              1~代付款  2~代发货 3~运输中 4~已签收 5~已取消 其他~无法查看</p>
-<p>2.作用域<br>    就是变量和函数的可访问范围<br>    分为全局作用域和局部(函数)作用域<br>    全局作用域：可以在代码的任何地方都能够访问。<br>    局部(函数)作用域：只是局限在函数的内部访问。<br>    （1）变量声明提升  （<strong><em>这是重点，要考的</em></strong>）<br>         JS程序执行前，在当前作用域下使用var声明的变量会提升到最前边，但赋值还是在原来的位置<br>    （2）函数的提升    fun()函数调用后的返回结果    fun表示函数的名称<br>         函数和变量一样，在js程序执行前，把使用function关键字创建的函数提升到最前边<br>       注意：如果函数名和变量名一致，变量会覆盖函数；（先提升函数，再提升变量）</p>
-<p>3.递归(了解)<br>    在函数的内部调用自身<br>    递归在使用的时候需要有结束条件，结合return<br>    斐波那契数列——1 1 2 3 5 8 13 21 34…<br>    课后任务：（1）复习今天内容，整理思维导图<br>              （2）使用递归计算斐波那契数列的第n项<br>          （3）预习JS中的对象</p>
+<pre><code>2.作用域
+     就是变量和函数的可访问范围
+     分为全局作用域和局部(函数)作用域
+     全局作用域：可以在代码的任何地方都能够访问。
+     局部(函数)作用域：只是局限在函数的内部访问。
+    （1）变量声明提升  （***这是重点，要考的***）
+          JS程序执行前，在当前作用域下使用var声明的变量会提升到最前边，但赋值还是在原来的位置
+    （2）函数的提升    fun()函数调用后的返回结果    fun表示函数的名称
+          函数和变量一样，在js程序执行前，把使用function关键字创建的函数提升到最前边
+     注意：如果函数名和变量名一致，变量会覆盖函数；（先提升函数，再提升变量）
+</code></pre><p>3.递归(了解)<br>    在函数的内部调用自身<br>    递归在使用的时候需要有结束条件，结合return<br>    斐波那契数列——1 1 2 3 5 8 13 21 34…<br>    课后任务：（1）复习今天内容，整理思维导图<br>              （2）使用递归计算斐波那契数列的第n项<br>          （3）预习JS中的对象</p>
 
       
 
@@ -284,6 +293,15 @@ console.log(str);              #  1*1=1
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/13/day10/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          匿名函数，全局函数，对象
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/11/day08/" id="article-nav-older" class="article-nav-link-wrap">

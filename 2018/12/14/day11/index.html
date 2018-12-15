@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Botn to death</title>
+  <title>数组 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="数组   数组是由多个元素组成的集合，是数据集合，每一个元素就是一个数据。  数据即为元素 1.创建数组             对象{}    数组[]    length对象中使用的属性名     （1）数组字面(直接)量          [元素1,元素2,…]      数组中是可以存放任意类型的数据     （2）内置的构造函数          new Array(元素1,元素2,…)">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组">
+<meta property="og:url" content="http://yoursite.com/2018/12/14/day11/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="数组   数组是由多个元素组成的集合，是数据集合，每一个元素就是一个数据。  数据即为元素 1.创建数组             对象{}    数组[]    length对象中使用的属性名     （1）数组字面(直接)量          [元素1,元素2,…]      数组中是可以存放任意类型的数据     （2）内置的构造函数          new Array(元素1,元素2,…)">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-14T10:15:32.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="数组">
+<meta name="twitter:description" content="数组   数组是由多个元素组成的集合，是数据集合，每一个元素就是一个数据。  数据即为元素 1.创建数组             对象{}    数组[]    length对象中使用的属性名     （1）数组字面(直接)量          [元素1,元素2,…]      数组中是可以存放任意类型的数据     （2）内置的构造函数          new Array(元素1,元素2,…)">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,295 +159,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-day11" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数组
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/14/day11/" class="archive-article-date">
+
+        
+        <a href="/2018/12/14/day11/" class="archive-article-date">
   	<time datetime="2018-12-14T10:09:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/14/day11/">数组</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数组<br>   数组是由多个元素组成的集合，是数据集合，每一个元素就是一个数据。  数据即为元素<br> 1.创建数组             对象{}    数组[]    length对象中使用的属性名<br>     （1）数组字面(直接)量<br>          [元素1,元素2,…]<br>      数组中是可以存放任意类型的数据<br>     （2）内置的构造函数<br>          new Array(元素1,元素2,…)<br>          new Array(5)     //初始化数组长度为5，可以继续添加第6个…<br>         访问数组中的元素<br>           数组名称[下标]    下标从0开始<br>       如果下表中没有元素，返回undefined。<br>        练习：创建数组，保存若干个用户名<br>          创建数组，初始化长度为3，添加三门课程<br> 2.获取数组元素的个数                     下标，元素值<br>           数组.length<br>       使用数组元素个数可以在最后添加一个新元素<br>              书写格式：数组[数组.length]=’数据’;<br>        练习：创建一个空数组，使用数组的长度添加3个手机品牌<br> 3.数组分类<br>           数组分为关联数组和索引数组<br>       关联数组：以字符串作为下标，需要单独添加每个元素。<br>       索引数组：以正整数作为下标<br> 4.遍历数组元素<br>      （1）for-in<br>          for(var key in person){<br>      key 要遍历的元素的下标<br>      person[key]  每个元素下标对应的数据<br>      }<br>      既可以遍历关联数组，也可以遍历索引数组<br>      （2）for循环<br>          var arr=[‘a’,’b’,’c’];<br>      for(var i=0;i&lt;arr.length;i++){<br>          i  代表数组的下标，从0开始<br>          arr[i]    下标对应的元素<br>      }<br>      只能遍历索引数组<br>    练习：创建数组，保存若干个学生的成绩，计算平均成绩<br>        练习：创建函数getCount，传递两个参数（数组，要查找的元素），<br>          返回要查找的元素在数组中出现的次数<br>              function getCount(arr,value){<br>              //查找value在arr中出现的次数<br>              //声明一个变量保存出现的次数，初始化0<br>              //遍历数组中的元素，如果满足，次数加1<br>              for(var i=0,count=0;i&lt;arr.length;i++){<br>              //如果元素的值是value，count加1<br>              if(arr[i]==value){<br>              count++;<br>              }<br>              };<br>              return count;<br>              };<br>              console.log(getCount([‘a’,’c’,’c’,’d’,’c’,’b’],’c’));<br> 5.数组中的方法(API)——(应用程序编程接口)——预先定义好的函数/方法<br>        toString()  数组中元素转为字符串，按照逗号分开<br>    join()      数组中的元素转为字符串，按照指定的字符分割数组中的元素<br>    concat(arr1,arr2,…)   拼接两个或者更多的数组<br>    slice(start,end)   截取数组中的元素，start开始的下标，end结尾的下标，不包含end本身；负数表示倒数第n个<br>      练习：创建数组，保存a~h，每个元素存储1个字母，截取保存bc和ef，拼接成一个新数组<br>        splice(start,count,value1,value2…)  删除数组中的元素，start开始的下标，count 删除的数量，<br>    value1，value2删除替换的元素。start为负值表示倒数第N个<br>    reverse()  翻转数组中的元素<br>    sort()  对数组中的元素进行排序，默认按照Unicode码由小到大排序<br>    sort(function(a,b){<br>      return a-b;   //数字由小到大<br>      return b-a;   //数字由大到小<br>    })</p>
+<p>   课后任务：<br>     （1）复习今天内容，整理思维导图<br>     （2）练习：  ①创建函数getMax，传递一个参数（数组），返回最大值。<br>                 ②使用数组遍历来翻转数组中的元素<br>                 ③了解冒泡排序<br>     （3）预习字符串方法</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/14/day11/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/13/day10/" class="archive-article-date">
-  	<time datetime="2018-12-13T10:32:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/13/day10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">匿名函数，全局函数，对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/13/day10/">匿名函数，全局函数，对象</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/12/day09/" class="archive-article-date">
-  	<time datetime="2018-12-12T11:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/12/day09/">函数类型及其作用域</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day08/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day08/">逻辑结构（下）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day07/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day07/">逻辑结构（上）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/07/day06/" class="archive-article-date">
-  	<time datetime="2018-12-07T10:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/07/day06/">数据的转换和运算符的表达</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/06/day05/" class="archive-article-date">
-  	<time datetime="2018-12-06T12:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/05/day04/" class="archive-article-date">
-  	<time datetime="2018-12-05T11:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/05/day04/">MySQL的自增列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/04/day03/" class="archive-article-date">
-  	<time datetime="2018-12-04T12:42:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/04/day03/">DAY THERE 关于计算的字符和MySQL的列类型和约束</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/03/day02/" class="archive-article-date">
-  	<time datetime="2018-12-03T12:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/03/day02/">DAY TWO 关于MYSQL</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -470,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
