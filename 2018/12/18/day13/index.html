@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Botn to death</title>
+  <title>Math,Date,Number对象 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="1.Math对象        abs()          取绝对值        floor()       向下取整        ceil()          向上取整        round()      四舍五入取整        max()         取一组数字最大值        min()         取一组数字最小值        pow(x,y)    取x的y">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Math,Date,Number对象">
+<meta property="og:url" content="http://yoursite.com/2018/12/18/day13/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="1.Math对象        abs()          取绝对值        floor()       向下取整        ceil()          向上取整        round()      四舍五入取整        max()         取一组数字最大值        min()         取一组数字最小值        pow(x,y)    取x的y">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-18T10:40:37.695Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="Math,Date,Number对象">
+<meta name="twitter:description" content="1.Math对象        abs()          取绝对值        floor()       向下取整        ceil()          向上取整        round()      四舍五入取整        max()         取一组数字最大值        min()         取一组数字最小值        pow(x,y)    取x的y">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,295 +159,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-day13" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Math,Date,Number对象
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/day13/" class="archive-article-date">
+
+        
+        <a href="/2018/12/18/day13/" class="archive-article-date">
   	<time datetime="2018-12-18T10:38:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/day13/">Math,Date,Number对象</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.Math对象<br>        abs()          取绝对值<br>        floor()       向下取整<br>        ceil()          向上取整<br>        round()      四舍五入取整<br>        max()         取一组数字最大值<br>        min()         取一组数字最小值<br>        pow(x,y)    取x的y次幂<br>        PI               取圆周率<br>        random()   取随机数       1&gt;范围&gt;=0<br>2.通过Unicode码获取对应的字符<br>         String.fromCharCode(编码)<br>3.Date对象<br>         用于对日期时间进行存储和计算<br>         （1）创建Date对象<br>                new   Date(‘2018/12/25 10:30:50’)<br>                new   Date(2018,10,25,10,30,50)//第二个参数月分<br>                new   Date()         存储当前系统时间<br>                new   Date(1000<em>60</em>60*24)     存储的是距离计算机元年毫秒数赌赢的日期时间<br>         （2）获取Date对象中的日期时间<br>                 getFullYear  Month  Date   Hours  Minutes  Milliseconds(毫秒)   getDay(星期)  getTime获取距离计算机元年的毫秒数<br>         （3）转为本地日期时间格式<br>                   toLocaleString()     //年-月-日   时：分：秒<br>                   toLocaleDateString()      //年-月-日<br>                   toLocaleTimeString()     //时：分：秒<br>         （4）设置日期时间<br>                  setFullYear/Month/Date/Hours/Minutes/Seconds/Milliseconds/Time<br>                  setTime设置距离计算机元年的毫秒数，一旦设置后，所有的日期时间都会受到影响<br>  练习：创建Date对象，保存员工的入职时间‘2018-11-16’，3年后合同到期，合同到期前1个月续签合同 ，<br>            如果续签时间是周末，提前到周五。提前一周通知人力准备续签（提醒时间）<br>                分别打印入职时间，到期时间，续签时间，提醒时间<br>练习：计算当前时间距离2018年圣诞节还有？天？时？分？秒<br>4.Number对象<br>            new Number(数据)<br>            创建一个Nunber对象，同时将数据转为数值型<br>              toFixed(n)     保留小数点后n位<br>              toString(n)   将数值型转为字符串类型，n设置转为的进制（2,8,16）<br>              Number.MAX_VALUE    获取计算机能存储的最大数值<br>              Number.MIN_VALUE    获取计算机能存储的最小数值<br>5.Boolean对象<br>             Boolean() / new  Boolean()<br>            创建Boolean对象，同时将数据转为布尔型<br>              !!数据           将数据转换为布尔型<br>              toString()    将布尔型数据转为字符串<br>6.ES6<br>    ECMAScript6<br>      （1）块级作用域<br>              特点：①使用let 关键字来声明变量，只能在块级作用域下访问<br>                           块级作用域: { } if/else/while/do-while/for里面大括号都是块级作用域<br>                        ②let关键字声明的变量不存在声明提升<br>      （2）箭头函数<br>                 是回调函数的另一种写法，和匿名函数不完全一致<br>                    sort((a,b)=&gt;{return a-b)};<br>                 如果函数中只有一行代码，并且是return形式，可以简化sort((a,b)=&gt;a-b);             </p>
+<p>课后任务:<br>             (1)复习今天内容，整理思维导图，回顾服务器概念<br>             (2)练习：双色球：随机取1~33之间的6个数字，不能重复，并且从小到大排序；随机取1~16之间一个数字，和之前6个数字组成数组<br>             (3)回顾服务器概念</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/18/day13/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/17/day12/" class="archive-article-date">
-  	<time datetime="2018-12-17T12:03:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/17/day12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS——字符串对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/17/day12/">JS——字符串对象</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/14/day11/" class="archive-article-date">
-  	<time datetime="2018-12-14T10:09:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/14/day11/">数组</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/13/day10/" class="archive-article-date">
-  	<time datetime="2018-12-13T10:32:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/13/day10/">匿名函数，全局函数，对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/12/day09/" class="archive-article-date">
-  	<time datetime="2018-12-12T11:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/12/day09/">函数类型及其作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day08/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day08/">逻辑结构（下）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day07/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day07/">逻辑结构（上）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/07/day06/" class="archive-article-date">
-  	<time datetime="2018-12-07T10:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/07/day06/">数据的转换和运算符的表达</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/06/day05/" class="archive-article-date">
-  	<time datetime="2018-12-06T12:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/05/day04/" class="archive-article-date">
-  	<time datetime="2018-12-05T11:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/05/day04/">MySQL的自增列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -470,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
