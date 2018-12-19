@@ -160,6 +160,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day14" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/19/day14/">NODEJS</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/19/day14/" class="archive-article-date">
+  	<time datetime="2018-12-19T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.ES6<br>        （1）函数中的参数<br>           在es6中允许形参设置默认值，如果没有传递实参，则自动调用形参的默认值<br>                    function add(num1,num2=7){}            // 7为默认值<br>        （2）模板字符串<br>                  <code>在此之间可以写任意形式代码   ${JS 语法}</code><br>                 练习：创建一个员工对象，包含姓名，性别，生日，工资；使用模板字符串打印员工信息<br>                            ‘姓名：<strong> ，性别：</strong>…’<br>2.错误处理<br>        （1）常见的错误<br>                 SYntaxError        语法错误，错误的使用了中文符号，缺少括号…程序不会执行<br>                 ReferenceError   引用错误，使用了未声明的变量，会影响后续代码的执行<br>                 TypeError           类型错误，错误的使用了数据的类型。例如把变量当函数使用，把对象当函数使用。会影响后续代码的执行<br>                 RangeError         范围错误，参数的使用超出了范围。例如new Array(3.5)。会影响后续代码的执行。<br>        （2）错误处理<br>                try{尝试执行可能出现的代码}catch(err){<br>                     捕获出现的错误，把错误信息放入到err中<br>                     错误处理方案<br>                     }<br>3.NODEJS概述<br>        NODEJS基于谷歌的V8引擎（JS解释器），运行在服务器端的语言，基于JS<br>           <a href="http://nodejs.org" target="_blank" rel="noopener">http://nodejs.org</a>    英文官网<br>           <a href="http://nodejs.cn" target="_blank" rel="noopener">http://nodejs.cn</a>      中文官网<br>        对比JS和NODEJS<br>            (1)JS运行在浏览器端，存在兼容性问题；NODEJS运行在服务器端，不存在兼容性问题<br>            (2)两者都有内置（ES）对象，自定义对象，宿主对象（根据执行环境的不同来划分）<br>            (3)JS用于网页中的交互效果，NODEJS用于服务器端操作，例如：创建web服务器，操作数据库…<br>        NODEJS两种执行方式<br>               脚本模式      node  C:/xampp/…/01.js<br>               交互模式      node    回车   进入交互模式<br>                                  两次Ctrl+c或者输入.exit    退出交互模式<br>        NODEJS 特点及用于<br>             支持数万个并发连接<br>             应用于举出社交网络的大规模web应用<br>4.全局对象<br>       NODEJS:global<br>          在交互模式下，声明的变量和创建的函数都是全局对象下的，可以使用global来访问，例如：var a=1；  global.a<br>          在脚本模式下，文件中声明的变量和创建的函数不是全局对象下的，不能使用global来访问<br>       JS：window<br>        在浏览器下，文件中声明的变量和创建的函数是全局对象下的，可以使用window来访问；例如：var a=1；window.a<br>         （1）console对象<br>               global.console.log            打印日志<br>               global.console.info()         打印消息<br>               global.console.warn()        警告<br>               global.console.error()       错误<br>               global.console.time(‘自定义字符串’)         开始计时<br>               global.console.timeEnd(‘自定义字符串’)   结束计时<br>                自定义字符串前后要保持一致<br>    练习：使用计时器查看for，while，do-while循环10000次的耗时<br>          （2）process<br>                 当前计算机的进程<br>                 process.arch    查看当前CPU的架构    x64<br>                 process.platform    查看当前的操作系统<br>                 process.env    查看当前的环境变量有哪些<br>                 process.version   查看当前nodejs的版本号<br>                 process.pid        查看当前的进行编号<br>                 process.kill(编号)   杀死某个编号的进程<br>           （3）Buffer<br>                    缓冲区：在内存中存储数据的区域，存储网络传输时的资源<br>                    创建buffer<br>                        var buff=Buffer.allor(5,‘abcde’)<br>                    将buffer数据转为普通字符串<br>                       buff.toString()<br>              练习：创建两个buffer区域，分别存储两个数字，计算两个数字相加。<br>5.模块系统<br>              模块是一个预定义好的功能体，在nodejs下，每一个文件都是一个模块<br>              在NODEJS下分为三个模块 ==&gt;   自定义模块，核心模块(官方提供)，第三方模块</p>
+<pre><code>   在NODEJS下，一个文件就是一个模块，文件中的代码默认是被一个构造函数所包含
+=====================================================
+   (function(exports, require, module, __filename, __dirname){  程序员编写的代码  }）
+=====================================================
+ __filename   当前文件的完整路径和文件名称
+ __dirname   当前文件完整路径
+ require    是一个函数，用于引入模块；       require (&apos;./07_2.js&apos;)
+ module    指代当前模块
+ module.exports    当前模块要导出的对象(公开的内容)，可以供其他的模块使用的属性和方法
+ exports等价于module.exports
+</code></pre><p>课后任务<br>    （1）复习今天的内容，整理思维导图<br>    （2）练习：创建两个模块main.js（主模块）。circle.js（功能模块）；在功能模块中创建两个函数，传递1个参数作为半径，分别获取圆的周长和面积，导出（公开）两个函数；在主模块中引入功能模块。调用两个函数<br>    （3）预习模块系统。  querystring，url</p>
+<pre><code>  数据分类：
+ 1.原始类型
+    特点：数据存储在栈内存，结构单一
+ 2.应用类型：
+   特点：数据存储在堆内存，结构复杂如何判断变量中存储的数据类型？
+ 3.   ①typeof
+          null:空指针对象
+          返回值 ： string/number/boolean/undefined/object/function
+          局限性：只能判断原始类型和函数
+       ②instance of
+       ③通过原型
+js中的5种基础数据类型？
+       函数调用传参：
+         1.针对原始类型：值传递
+            (将原变量的值复制一份给形参，今后对形参做的所有操作与原变量无关)
+         2.针对引用类型：址传递
+          （将原变量的地址复制一份给形参，只有其中一处引用修改了堆中的数据，受影响的将是所有的引用该地址的变量）
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/19/day14/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day13" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -899,96 +990,6 @@ str+=i+&apos; * &apos;+j+&apos;=&apos;+(i * j)+&apos; &apos;;       ②  str+=i+
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/12/06/day05/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day04" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/05/day04/">MySQL的自增列</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/05/day04/" class="archive-article-date">
-  	<time datetime="2018-12-05T11:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.列约束<br>（1）主键约束————PRIMARY KEY<br>（2）唯一约束————UNIQUE                     *syntax语法错误<br>（3）非空约束————NOT NULL<br>     声明了非空约束的列上不能插入NULL<br>（4）默认值约束————DEFAULT<br>     DEFAULT关键字声明默认值，有两种方式可以应用默认值<br>     INSERT INTO xz VALUES(40,’苹果’,DEFAULT);<br>     INSERT INTO xz (fid,fname)VALUES(50,’华硕’,DEFAULT);<br>（5）检查约束————CHECK<br>     检查约束可以对插入的数据进行检验<br>     CREATE INTO xz VALUES(age TINYINT CHECK(age&gt;=18 AND age&lt;=60))<br>     CREATE INTO xz VALUES()<br>     MySQL不支持检查约束，会降低数据的插入速度<br>（6）外键约束————FOREIGN KEY<br>     声明了外键约束的列，取值必须在另一个表的主题列键上出现过，列类型要保持一致,取值可以是NULL<br>     FOREIGN KEY(familyld)     REFERENCES xz(fid) #REFERENCES#引用</p>
-<p>2.MySQL中的自增列<br>   （1）AUTO_INCREMENT:自动增长，加入一个列声明了自增列，无需手动赋值。直接设  置为NULL,会获得当前的最大值，最后+1插入。</p>
-<pre><code>注意：
-    自增列允许手动赋值
-只适用于整数型的主键列上
-</code></pre><p>课堂练习 【创建脚本xz.sql,数据库xz，设置编码UTF8，表dept(did,dname),10 研发部 20 市场部 30 运营部 40 测试部】<br>         【表emp(eid,ename,sex,birthday生日,salary工资,deptld所属部门编号)插入15条记录，有一个员工没有确定部门，有一个部门没有员工】</p>
-<p>   （2）查询所有的列<br>         查询所有员工的编号，姓名，性别，所属部门编号<br>                  SELECT eid,ename,sex,deptld FROM emp;<br>   （3）给列起别名<br>        示例：查询所有员工的姓名和工资，使用汉字的别名显示<br>                  SELECT ename AS 姓名,salary AS 工资 FROM emp;</p>
-<pre><code>注意:AS关键字可以省略，要保留空格。
-</code></pre><p>   （4）只显示不同的记录/合并相同的记录<br>        示例：查询出员工都在哪些部门<br>                  SELECT DISTINCT deptId FROM emp;    #DISTINCT合并<br>        练习，都有哪些性别的员工<br>                  SELECT DISTINCT sex FROM emp;<br>   （5）在查询时执行计算<br>        示例：计算2  <em> 33/47-8+10<br>                  SELECT 2  </em> 33/47-8+10;<br>        练习：查询所有员工的姓名及其年薪<br>                  SELECT ename,salary<em>12 FROM emp;<br>        练习：假设每个员工工资增加500元，年终奖5000元，查询所有员工的姓名及其年薪，要给列起别名<br>                  SELECT ename 姓名,(salary+500)</em>12+5000 工资 FROM emp;<br>   （6）查询结果集的排序<br>        示例：查询所有的部门，结果按照部门编号升序排序<br>                  SELECT  <em>  FROM dept ORDER BY did ASC;  #ascendant向上的<br>        示例：查询所有的部门，结果按照部门编号降序排序<br>                  SELECT  </em>  FROM dept ORDER BY did DESC; #desc由大到小<br>        练习：查询所有员工信息，结果按照工资由大到小排序<br>                  SELECT  <em>  FROM emp ORDER BY salary DESC;<br>        练习：查询所有员工信息，结果满足性别分类，工资由小到大排序<br>                  SELECT  </em>  FROM emp ORDER BY sex,salary;</p>
-<pre><code>ORDER BY 可以按照数值，日期/时间，字符串来排序，默认是按照ASC升序排序
-</code></pre><p>   （7）条件查询<br>        示例：查询出编号为5的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE eid=5;<br>        练习：查询出姓名为king的员工的编号，工资，生日。<br>                  SELECT eid,birthday,salary FROM emp WHERE ename=’king’;<br>        练习：查询出部门编号为20的所有信息<br>                  SELECT  </em>  FROM emp WHERE deptId=20;<br>        练习：查询出男员工的所有信息<br>                  SELECT  <em>  FROM emp WHERE sex=1;<br>        练习：查询出工资大于等于5000的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE salary&gt;=5000;<br>                【&gt;=  &lt;=  &lt;  &gt;  =  !=(不等于)】比较运算符<br>        练习：查询出1991-1-1后出生的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE birthday&gt;=’1991-1-1’;<br>        练习：查询出部门编号不能为空的部门所有人员信息<br>                  SELECT  </em>  FROM emp WHERE deptId IS NOT NULL;    #IS NULL/IS NOT NULL<br>        练习：查询出工资大于6000的女员工所有信息<br>                  SELECT  <em>  FROM emp WHERE salary&gt;6000 AND sex=0;<br>        练习:查询出工资在5000~7000之间的员工的所有信息<br>                  SELECT  </em>  FROM emp WHERE salary&gt;=5000 and salary&lt;=7000;     #between…and…两者之间<br>                  SELECT  <em>  FROM emp WHERE salary between 5000 and 7000;<br>        练习：查询出工资为5000以下，7000以上的员工信息。<br>                  SELECT  </em>  FROM emp WHERE salary&gt;5000 or salary&lt;7000;<br>                  SELECT  <em>  FROM emp WHERE salary not between 5000 and 7000;<br>        练习：查询出1990年之前出生的员工，和1993之后出生的员工的所有的信息<br>                  SELECT  </em>  FROM emp WHERE birthday not between ‘1990-1-1’ and ‘1993-12-31’;<br>                  SELECT  <em>  FROM emp WHERE birthday&lt;’1990-1-1’ or birthday&gt;’1993-12-31’;<br>        练习：查询出1993年出生的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE birthday between’1993-1-1’ and ‘1993-12-31’;<br>        练习：查询出10号部门和30号部门员工所有信息<br>                  SELECT  <em>  FROM emp WHERE deptId=30 or deptId=10;<br>                  SELECT  </em>  FROM emp WHERE deptId IN(10,30);<br>        练习：查询不在10号和30号部门员工所有信息<br>                  SELECT  *  FROM emp WHERE deptId not in(10,30);</p>
-<pre><code>IS NULL/IS NOT NULL(有明确部门/没有明确部门)
-AND/OR   (和/或)
-BETWEEN...AND.../NOT BETWEEN...AND...
-IN()/NOT IN()
-注意：删除、更改、查询都可以结合查询。
-</code></pre><p>   （8）模糊条件查询<br>        示例：查询出员工姓名含有字母e的员工所有信息<br>                  SELECT  <em>  FROM emp WHERE ename LIKE’%e%’;<br>        练习：查询出姓名中以e结尾的员工所有信息<br>                  SELECT  </em>  FROM emp WHERE ename LIKE’%e’;<br>        练习：查询出姓名中倒数第二个字符为e的员工所有信息<br>                  SELECT  *  FROM emp WHERE ename LIKE’%e_’; </p>
-<pre><code>     SQL中提供了两个模糊查询的字符
-%  可以匹配任意多个字符   &gt;=0
-_  可以匹配任意一个字符   =1
-注意：以上两个匹配不能和=使用，必须使用LIKE关键字
-</code></pre><p>   （9）分页查询<br>         假如查询的结果有太多的数据，一次显示不完，可以分页显示<br>         需要有两个条件  当前的页码、每页的数据量<br>                  SELECT  *  FROM emp LIMIT start,count()      # LIMIT限制<br>                  start:是一个数字，从结果集中的哪1条开始读取，第一条成为0，<br>                  count:是一个数字，最多读取的行数</p>
-<pre><code>    每页开始的算法：start=(页码-1)*count
-
-假设每一页显示五条记录
-第一页：SELECT  *  FROM emp LIMIT 0,5; 
-第二页：SELECT  *  FROM emp LIMIT 5,5;
-</code></pre><p>   课后任务：<br>    （1）复习今天的内容，删除代码，保留注释重新编写代码<br>    （2）练习：<br>        查询出工资为8000以上的女员工的姓名，性别，生日，结果集按照工资降序排序，取前3个人。<br>    （3）查看’学子商城’的完整规划图</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/05/day04/">展开全文 >></a>
         </p>
       
 

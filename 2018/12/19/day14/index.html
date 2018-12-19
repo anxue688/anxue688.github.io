@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Botn to death</title>
+  <title>NODEJS | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="1.ES6        （1）函数中的参数           在es6中允许形参设置默认值，如果没有传递实参，则自动调用形参的默认值                    function add(num1,num2=7){}            // 7为默认值        （2）模板字符串                  在此之间可以写任意形式代码   ${JS 语法}">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NODEJS">
+<meta property="og:url" content="http://yoursite.com/2018/12/19/day14/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="1.ES6        （1）函数中的参数           在es6中允许形参设置默认值，如果没有传递实参，则自动调用形参的默认值                    function add(num1,num2=7){}            // 7为默认值        （2）模板字符串                  在此之间可以写任意形式代码   ${JS 语法}">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-19T12:44:38.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="NODEJS">
+<meta name="twitter:description" content="1.ES6        （1）函数中的参数           在es6中允许形参设置默认值，如果没有传递实参，则自动调用形参的默认值                    function add(num1,num2=7){}            // 7为默认值        （2）模板字符串                  在此之间可以写任意形式代码   ${JS 语法}">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,295 +159,183 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-day14" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      NODEJS
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/19/day14/" class="archive-article-date">
+
+        
+        <a href="/2018/12/19/day14/" class="archive-article-date">
   	<time datetime="2018-12-19T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/19/day14/">NODEJS</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.ES6<br>        （1）函数中的参数<br>           在es6中允许形参设置默认值，如果没有传递实参，则自动调用形参的默认值<br>                    function add(num1,num2=7){}            // 7为默认值<br>        （2）模板字符串<br>                  <code>在此之间可以写任意形式代码   ${JS 语法}</code><br>                 练习：创建一个员工对象，包含姓名，性别，生日，工资；使用模板字符串打印员工信息<br>                            ‘姓名：<strong> ，性别：</strong>…’<br>2.错误处理<br>        （1）常见的错误<br>                 SYntaxError        语法错误，错误的使用了中文符号，缺少括号…程序不会执行<br>                 ReferenceError   引用错误，使用了未声明的变量，会影响后续代码的执行<br>                 TypeError           类型错误，错误的使用了数据的类型。例如把变量当函数使用，把对象当函数使用。会影响后续代码的执行<br>                 RangeError         范围错误，参数的使用超出了范围。例如new Array(3.5)。会影响后续代码的执行。<br>        （2）错误处理<br>                try{尝试执行可能出现的代码}catch(err){<br>                     捕获出现的错误，把错误信息放入到err中<br>                     错误处理方案<br>                     }<br>3.NODEJS概述<br>        NODEJS基于谷歌的V8引擎（JS解释器），运行在服务器端的语言，基于JS<br>           <a href="http://nodejs.org" target="_blank" rel="noopener">http://nodejs.org</a>    英文官网<br>           <a href="http://nodejs.cn" target="_blank" rel="noopener">http://nodejs.cn</a>      中文官网<br>        对比JS和NODEJS<br>            (1)JS运行在浏览器端，存在兼容性问题；NODEJS运行在服务器端，不存在兼容性问题<br>            (2)两者都有内置（ES）对象，自定义对象，宿主对象（根据执行环境的不同来划分）<br>            (3)JS用于网页中的交互效果，NODEJS用于服务器端操作，例如：创建web服务器，操作数据库…<br>        NODEJS两种执行方式<br>               脚本模式      node  C:/xampp/…/01.js<br>               交互模式      node    回车   进入交互模式<br>                                  两次Ctrl+c或者输入.exit    退出交互模式<br>        NODEJS 特点及用于<br>             支持数万个并发连接<br>             应用于举出社交网络的大规模web应用<br>4.全局对象<br>       NODEJS:global<br>          在交互模式下，声明的变量和创建的函数都是全局对象下的，可以使用global来访问，例如：var a=1；  global.a<br>          在脚本模式下，文件中声明的变量和创建的函数不是全局对象下的，不能使用global来访问<br>       JS：window<br>        在浏览器下，文件中声明的变量和创建的函数是全局对象下的，可以使用window来访问；例如：var a=1；window.a<br>         （1）console对象<br>               global.console.log            打印日志<br>               global.console.info()         打印消息<br>               global.console.warn()        警告<br>               global.console.error()       错误<br>               global.console.time(‘自定义字符串’)         开始计时<br>               global.console.timeEnd(‘自定义字符串’)   结束计时<br>                自定义字符串前后要保持一致<br>    练习：使用计时器查看for，while，do-while循环10000次的耗时<br>          （2）process<br>                 当前计算机的进程<br>                 process.arch    查看当前CPU的架构    x64<br>                 process.platform    查看当前的操作系统<br>                 process.env    查看当前的环境变量有哪些<br>                 process.version   查看当前nodejs的版本号<br>                 process.pid        查看当前的进行编号<br>                 process.kill(编号)   杀死某个编号的进程<br>           （3）Buffer<br>                    缓冲区：在内存中存储数据的区域，存储网络传输时的资源<br>                    创建buffer<br>                        var buff=Buffer.allor(5,‘abcde’)<br>                    将buffer数据转为普通字符串<br>                       buff.toString()<br>              练习：创建两个buffer区域，分别存储两个数字，计算两个数字相加。<br>5.模块系统<br>              模块是一个预定义好的功能体，在nodejs下，每一个文件都是一个模块<br>              在NODEJS下分为三个模块 ==&gt;   自定义模块，核心模块(官方提供)，第三方模块</p>
+<pre><code>   在NODEJS下，一个文件就是一个模块，文件中的代码默认是被一个构造函数所包含
+=====================================================
+   (function(exports, require, module, __filename, __dirname){  程序员编写的代码  }）
+=====================================================
+ __filename   当前文件的完整路径和文件名称
+ __dirname   当前文件完整路径
+ require    是一个函数，用于引入模块；       require (&apos;./07_2.js&apos;)
+ module    指代当前模块
+ module.exports    当前模块要导出的对象(公开的内容)，可以供其他的模块使用的属性和方法
+ exports等价于module.exports
+</code></pre><p>课后任务<br>    （1）复习今天的内容，整理思维导图<br>    （2）练习：创建两个模块main.js（主模块）。circle.js（功能模块）；在功能模块中创建两个函数，传递1个参数作为半径，分别获取圆的周长和面积，导出（公开）两个函数；在主模块中引入功能模块。调用两个函数<br>    （3）预习模块系统。  querystring，url</p>
+<pre><code>  数据分类：
+ 1.原始类型
+    特点：数据存储在栈内存，结构单一
+ 2.应用类型：
+   特点：数据存储在堆内存，结构复杂如何判断变量中存储的数据类型？
+ 3.   ①typeof
+          null:空指针对象
+          返回值 ： string/number/boolean/undefined/object/function
+          局限性：只能判断原始类型和函数
+       ②instance of
+       ③通过原型
+js中的5种基础数据类型？
+       函数调用传参：
+         1.针对原始类型：值传递
+            (将原变量的值复制一份给形参，今后对形参做的所有操作与原变量无关)
+         2.针对引用类型：址传递
+          （将原变量的地址复制一份给形参，只有其中一处引用修改了堆中的数据，受影响的将是所有的引用该地址的变量）
+</code></pre>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/19/day14/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/day13/" class="archive-article-date">
-  	<time datetime="2018-12-18T10:38:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/18/day13/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Math,Date,Number对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/day13/">Math,Date,Number对象</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/17/day12/" class="archive-article-date">
-  	<time datetime="2018-12-17T12:03:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/17/day12/">JS——字符串对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/14/day11/" class="archive-article-date">
-  	<time datetime="2018-12-14T10:09:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/14/day11/">数组</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/13/day10/" class="archive-article-date">
-  	<time datetime="2018-12-13T10:32:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/13/day10/">匿名函数，全局函数，对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/12/day09/" class="archive-article-date">
-  	<time datetime="2018-12-12T11:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/12/day09/">函数类型及其作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day08/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day08/">逻辑结构（下）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/day07/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/day07/">逻辑结构（上）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/07/day06/" class="archive-article-date">
-  	<time datetime="2018-12-07T10:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/07/day06/">数据的转换和运算符的表达</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/06/day05/" class="archive-article-date">
-  	<time datetime="2018-12-06T12:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -470,8 +359,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
