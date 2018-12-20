@@ -160,6 +160,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day05" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/06/day05/" class="archive-article-date">
+  	<time datetime="2018-12-06T12:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.复杂查询————聚合查询/分组查询<br>      (1）聚合查询<br>          示例： 查询出所有员工的数量<br>                              SELECT COUNT(eid) FROM emp;<br>                              SELECT COUNT(ename) FROM emp;<br>     练习：使用员工部门编号获取员工数量<br>                              SELECT COUNT(deptId) FROM emp;   #14<br>                              SELECT COUNT(<em>) FROM emp;  #15<br>                      函数：功能体，接收若干个数据，返回特定的结果——饺子机<br>                      聚合函数    COUNT()  数量  /SUM()  总和  /AVG()  平均  /MAX()  最大  /MIN()  最小<br>     练习：查询出所有员工工资的总和<br>                               SELECT SUM(salary) FROM emp;<br>     练习：查询出所有男员工的平均工资<br>                               SELECT AVG(salary) FROM emp WHERE sex=1;<br>                               SELECT SUM(salary)/COUNT(</em>) FROM emp WHERE sex=1;<br>     练习：查询出工资最低的员工的工资<br>                               SELECT MIN(salary) FROM emp;<br>     练习：查询出工资最高的员工的工资<br>                               SELECT MAX(salary) FROM emp;<br>     练习：查询出年龄最大的员工的生日<br>                               SELECT MIN(birthday) FROM emp;<br>（2）分组查询——只能查询分组条件和聚合函数                 #GROUP BY     分组<br>                               SELECT MAX(salary) FROM emp GROUP BY deptId;<br>                               SELECT deptId,MAX(salary) FROM emp GROUP BY deptId;<br>          练习：查询出男女员工的平均工资，最高工资，最低工资<br>                               SELECT sex,AVG(salary),MAX(salary),MIN(salary) FROM emp GROUP BY sex;<br>                      YEAR()   获取日期中的年份<br>                      MONTH() 获取日期中的月份<br>     示例:查询1991年出生的员工<br>                               SELECT <em> FROM emp WHERE YEAR(birthday)=’1991’;<br>     示例:查询3月份出生的员工<br>                               SELECT </em> FROM emp WHERE MONTH(birthday)=’3’;<br>2.复杂查询——子查询<br>                 本质上就是一个SQL语句的查询结果作为另一个SQL语句的查询条件<br>                      示例:查询出研发部员工的所有信息<br>                      步骤1：查询研发部的部门编号<br>                                SELECT did FROM dept WHERE dname=’研发部’;<br>                      步骤2：使用编号查询员工 ——10<br>                                SELECT <em> FROM emp WHERE deptId=10;<br>                      综合：SELECT </em> FROM emp WHERE deptId=( SELECT did FROM dept WHERE dname=’研发部’);<br>                      练习：查询比tom工资高的员工的所有信息<br>                                SELECT <em> FROM emp WHERE salary&gt;(SELECT salary FROM emp WHERE ename=’tom’);<br>                      练习：查询出和tom同一年出生的员工所有信息<br>                            1     SELECT YEAR(birthday) FROM emp WHERE ename=’tom’;<br>                            2     SELECT </em> FROM emp WHERE YEAR(birthday)=1990;<br>                        综合： SELECT <em> FROM emp WHERE YEAR(birthday)=(SELECT YEAR(birthday) FROM emp WHERE ename=’tom’);<br>3.复杂查询——多表查询<br>                     示例：查询出所有员工的姓名及其部门名称<br>                                   SELECT ename,dname FROM emp,dept;<br>                     笛卡尔积！<br>                             如何避免笛卡尔积，为多表查询添加条件。<br>                              SELECT ename,dname FROM emp,dept WHERE deptId=did;<br>                      上述语法无法查询出没有部门的员工，也不能查询没有员工的部门——SQL92<br>         （1）内连接 ——INNER JOIN…ON——和之前结果一样<br>                              SELECT ename,dname FROM emp INNER JOIN dept ON deptId=did;<br>         （2）左外连接——LEFT OUTER JOIN…ON——会查询左侧表中所有的记录，即使右侧没有对应的记录。  #OUTER是可以省略的<br>                              SELECT ename,dname FROM emp LEFT OUTER JOIN dept ON deptId=did;<br>         （3）右外连接——RIGHT OUTER JOIN…ON——会查询右侧表中所有的记录，即使左侧没有对应的记录。<br>                              SELECT ename,dname FROM emp RIGHT OUTER JOIN dept ON deptId=did;<br>         （4）全连接——FULL JION——显示左侧表中所有记录——MySQL不支持<br>         （5）MySQL中的全连接——UNION——合并相同的记录<br>                                            ——UNION ALL——不合并相同的记录<br>                              (SELECT ename,dname FROM emp LEFT OUTER JOIN dept ON deptId=did)<br>                              UNION ALL<br>                              (SELECT ename,dname FROM emp RIGHT OUTER JOIN dept ON deptId=did);<br>4.项目中如何保存日期、时间<br>              2018-12-6   14:40:30<br>          存储的是 距离计算机元年（1970-1-1）的毫秒数<br>              48  </em> 365  <em>  24  </em> 60 <em> 60 </em> 1000<br>              1513728000000      统一使用BIGINT的列类型<br>    参考新闻部分<br>      <a href="http://www.gree.com.cn/pczwb/xwzx/index.shtlm" target="_blank" rel="noopener">http://www.gree.com.cn/pczwb/xwzx/index.shtlm</a> </p>
+<p>   5.学习一门编程语言的基本步骤<br>                  (1)了解背景知识：历史、现状、特点、应用场景。<br>                  (2)搭建开发环境，编写hello world<br>                  (3)变量和常量<br>                  (4)数据类型<br>                  (5)运算符<br>                  (6)逻辑结构<br>                  (7)通用小程序<br>                  (8)函数和对象<br>                  (9)第三方库、框架<br>                  (10)实用的项目<br>   6.JS概述<br>        （1）历史<br>                 1995年，JS最早出现在Netscape的浏览器中<br>                 2009nian ,JS遵循CommonJS规范，开始向服务器端发展。<br>                    <a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>   nodejs下载地址<br>        （2）特点<br>                    弱类型语言<br>                    解释型语言，编译一行，执行一行<br>                    跨平台<br>                    基于对象（对象是一种数据的形式）<br>        （3）应用领域<br>                    网页中的交互效果<br>                    移动APP<br>                    WeB服务器端<br>    7.搭建JS开发环境<br>               浏览器中，内置的JS解释器<br>               服务器中，需要安装NODEJS</p>
+<pre><code>运行方式
+   （1）NODEJS下
+           创建js文件
+           node  c:/xampp/.../02.js
+   （2）浏览器下
+           创建js文件
+           创建html文件
+                   &lt;script  src=&apos;02.js&apos;&gt;&lt;/script&gt;
+           双击打开html
+</code></pre><p> 8.JS语法规范<br>               （1）区分大小写<br>               （2）每行结束的分号可加可不加，习惯上都加<br>               （3）分为单行注释（//..）和多行注释（/<em>…</em>/）<br> 9.变量<br>                变量就是用于存储数据的容器<br>                         x=1，y=2<br>            （1）声明变量<br>                        使用关键字   var<br>                         var    x=1;<br>                练习：声明多个变量，分别存储员工的编号、姓名、性别、生日、工资、部门编号。<br>            （2）变量的命名规则<br>                        变量中可以使用字母、美元符号、下划线、数字，但是不能以数字开头。<br>                        不能使用关键字和保留字作为关键名<br>                userName     isOnsale      驼峰命名<br>                user_name    is_onsale     下划线命名<br>            （3）一次声明多个变量<br>                     var chinese=90,math=95;<br>                     多个变量之间用逗号隔开。<br>            （4）声明变量未赋值<br>                     var a;<br>                     a的值为undefined(未定义)<br> 10.常量<br>                 一旦声明就不能从新赋值。<br>                 例如：圆周率、春节、中秋节…<br>                        const pi=3.1415;<br>                 练习：使用变量存储半径，使用常量存储圆周率，计算圆的面积和周长。</p>
+<p>课后任务：<br>               （1）复习今天内容，删除代码，根据注释编写<br>               （2）练习：使用变量保存圆的半径为5，常量保存为圆周为3.14，分别计算30度/60度的周长。<br>                                 使用变量保存商品1 的单价12.5和数量7，商品2的单价18，数量3.5，计算商品的总价。<br>               （3）预习JS的数据类型</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/06/day05/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day04" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
