@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Botn to death</title>
+  <title>HTTP协议 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="1.文件系统模块——fs         （1）删除文件                         fs.unlink(路径，回调函数/unlinkSync(路径))         （2）判断文件是否存在                    fs.existsSync(路径)         （3）追加写入数据                    fs.appendFile(路径，数据">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP协议">
+<meta property="og:url" content="http://yoursite.com/2018/12/21/day16/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="1.文件系统模块——fs         （1）删除文件                         fs.unlink(路径，回调函数/unlinkSync(路径))         （2）判断文件是否存在                    fs.existsSync(路径)         （3）追加写入数据                    fs.appendFile(路径，数据">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-21T10:14:14.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="HTTP协议">
+<meta name="twitter:description" content="1.文件系统模块——fs         （1）删除文件                         fs.unlink(路径，回调函数/unlinkSync(路径))         （2）判断文件是否存在                    fs.existsSync(路径)         （3）追加写入数据                    fs.appendFile(路径，数据">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,214 +159,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-day16" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTTP协议
+    </h1>
+  
+
+        
+        <a href="/2018/12/21/day16/" class="archive-article-date">
+  	<time datetime="2018-12-21T10:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-21</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.文件系统模块——fs<br>         （1）删除文件<br>                         fs.unlink(路径，回调函数/unlinkSync(路径))<br>         （2）判断文件是否存在<br>                    fs.existsSync(路径)<br>         （3）追加写入数据<br>                    fs.appendFile(路径，数据，回调函数)<br>                    fs.appendFileSync(路径，数据)<br>              如果文件不存在会创建文件，如果文件已经存在，会在末尾追加写入数据<br>         （4）读取文件<br>                  fs.readFile(路径，回调函数)/fs.readFileSync(路径)<br>              读取的数据格式为buffer格式<br>      练习:判断文件num.txt是否存在，如果不存在，创建文件，并写入数字0，读取文件中的内容，执行自增，打印出来；把自增的结果写入到文件中。<br>2.http协议<br>      是浏览器和web服务器之间的通信协议<br>          （1）通用头信息<br>                  Request URL：请求的URL,向服务器端获取的内容<br>                  Request Method:请求的方法  get/post     get获取内容<br>              past常用于向服务器端传递较高的数据<br>                  Status Code：响应的状态码<br>                  2<strong>：服务器成功的响应<br>                  3</strong>：响应的重定向，跳转到另一个URL<br>                  4<strong>：客户端错误<br>                  5</strong>：服务器端的错误<br>          （2）响应头信息<br>                Renote  Address:请求的服务器的IP地址和端口号<br>                Content-Type：响应的文件类型<br>                Transfer-Encoding:响应似的传输方式，chunked（分段传输）<br>          （3）请求的头信息<br>                Accpet：客户端接受的文件类型有哪些<br>                Connection:客户端和服务器端的连接方式<br>                User-Agent：客户端使用的浏览器<br>          （4）请求的主体<br>            可有可无，浏览器端向服务器端传递的数据<br>3.http模块<br>      可以模拟浏览器向服务器daunt发送请求；也可以创建web服务器<br>    （1）模拟浏览器<br>          http.get(url.callback)<br>           url 请求的URL<br>           callback   是回调函数，用来获取服务器端的响应<br>            res 响应的对象<br>            res.statusCode    响应的状态码<br>            res.on(‘data’,(buf)=&gt;{<br>             通过一个事件来获取服务器端响应的数据，当有数据传递的时候，自动调用回调函数，把数据放入到buf中，格式为buffer<br>             })<br>    （2）创建web服务器<br>             var  server=http.createServer()    //创建web服务器<br>            server.listen(3000)                      //分配端口，监听3000端口的变化<br>            server.on(‘request’,(req,res)=&gt;{   })<br>            // 接收浏览器的请求，是事件的形式，一旦有请求，自动执行<br>                  req         请求的对象<br>                  url          请求的url，用于告诉服务器要获取的内容<br>                  method  请求的方法，直接在地址栏输入默认都是get<br>                  headers  请求头的信息<br>                  res          响应的对象<br>                  writeHead(状态码，{ })设置响应的状态码和头信息；如果跳转需要设置Location属性<br>                  write()       将相应的数据发送到浏览器中<br>                  end()         结束响应<br>练习：创建web服务器，监听3001端口，使用事件来获取浏览器的请求，打印请求的URL和请求的方法<br>                  <a href="http://127.0.0.1:3001/admin/login.html" target="_blank" rel="noopener">http://127.0.0.1:3001/admin/login.html</a><br>                  <a href="http://127.0.0.1:3001/member/shopping.html" target="_blank" rel="noopener">http://127.0.0.1:3001/member/shopping.html</a><br>练习：创建web服务器，监听端口3000，接收浏览器端的请求<br>                请求的URL：  /login          响应文本：this is login page<br>                请求的URL： /member      响应文本:this is member page<br>                请求的URL：/      跳转到：   /member<br>          如果以上都没有匹配的URL，响应文本：404 not found<br>4.express框架<br>     基于NODEJS，用于构建web服务器的框架<br>     官网：<a href="http://www.expressjs.com.cn" target="_blank" rel="noopener">www.expressjs.com.cn</a><br>     安装：npm   install   express<br> const express=require(‘express’)//引入下载的模块<br>var server=express();   //创建web服务器<br>server.listen(3000,()=&gt;{})<br>    (1)路由<br>    浏览器向web服务器发送请求，web服务器会根据请求的URL和请求的方法来做出响应<br>   res.send()      影响文本，每个路由只能使用一次send</p>
+<p>课后任务:<br>  (1)复习今天内容，整理思维导图<br>（2）练习：<br>使用express创建web服务器，添加以下路由<br>     get     ‘/index’   发送文本，   ‘这是首页’<br>     get  ‘/login’  发送文本   ‘这是注册页面’<br>     post ‘/reg’   发送文本    ‘注册成功’<br>（3）预习express的中间件，浏览器向服务器传递数据的方式有哪些</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/07/day06/" class="archive-article-date">
-  	<time datetime="2018-12-07T10:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/07/day06/">数据的转换和运算符的表达</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/21/day16/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/06/day05/" class="archive-article-date">
-  	<time datetime="2018-12-06T12:17:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/20/day15/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模块</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/06/day05/">MySQL复杂查询以及JS(javaScript)定义与开发</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/05/day04/" class="archive-article-date">
-  	<time datetime="2018-12-05T11:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/05/day04/">MySQL的自增列</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/04/day03/" class="archive-article-date">
-  	<time datetime="2018-12-04T12:42:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/04/day03/">DAY THERE 关于计算的字符和MySQL的列类型和约束</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/03/day02/" class="archive-article-date">
-  	<time datetime="2018-12-03T12:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/03/day02/">DAY TWO 关于MYSQL</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/01/内涵段子/" class="archive-article-date">
-  	<time datetime="2018-12-01T07:53:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/01/内涵段子/">内涵段子</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/01/hello-world/" class="archive-article-date">
-  	<time datetime="2018-12-01T05:34:34.994Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -389,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

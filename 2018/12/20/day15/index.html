@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day15 | Botn to death</title>
+  <title>模块 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="1.模块以路径开头文件模块       require(‘./circle.js’)   常用于用户自定义模块， 如果后缀名是.js是可以省略的目录模块      require(‘./02_2’) ，会在当前目录下的02_2中寻找package.json文件中 的main属性对应的值，如果不存在该文件，则自动寻找index.js不以路径开头文件模块   require(‘url’/queryst">
 <meta name="keywords" content="沙雕欢乐多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day15">
+<meta property="og:title" content="模块">
 <meta property="og:url" content="http://yoursite.com/2018/12/20/day15/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="1.模块以路径开头文件模块       require(‘./circle.js’)   常用于用户自定义模块， 如果后缀名是.js是可以省略的目录模块      require(‘./02_2’) ，会在当前目录下的02_2中寻找package.json文件中 的main属性对应的值，如果不存在该文件，则自动寻找index.js不以路径开头文件模块   require(‘url’/queryst">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T12:19:01.627Z">
+<meta property="og:updated_time" content="2018-12-20T12:44:46.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="day15">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="模块">
+<meta name="twitter:description" content="1.模块以路径开头文件模块       require(‘./circle.js’)   常用于用户自定义模块， 如果后缀名是.js是可以省略的目录模块      require(‘./02_2’) ，会在当前目录下的02_2中寻找package.json文件中 的main属性对应的值，如果不存在该文件，则自动寻找index.js不以路径开头文件模块   require(‘url’/queryst">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -166,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      day15
+      模块
     </h1>
   
 
@@ -179,7 +179,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="1-模块"><a href="#1-模块" class="headerlink" title="1.模块"></a>1.模块</h2><p>以路径开头<br>文件模块       require(‘./circle.js’)   常用于用户自定义模块， 如果后缀名是.js是可以省略的<br>目录模块      require(‘./02_2’) ，会在当前目录下的02_2中寻找package.json文件中 的main属性对应的值，如果不存在该文件，则自动寻找index.js<br>不以路径开头<br>文件模块   require(‘url’/querystring)   常用于官方提供的核心模块<br>目录模块   require(‘04_2’)     常用于官方提供的核心模块，要求引入的目录出现在node_modules中，如果找不到，则会到上一级目录查找，直到顶层。常用于第三方模块<br>练习：创建模块03_1.js,引入当前目录下的03_2目录模块，在03_2下创建my.js,在该文件下导出一个方法fn(两个数字相加)，在03_1.js中引入后调用的方法<br>练习：创建模块05_1.js引入不带路径的目录模块05_2,05_2目录中含有hello.ls文件（随便打印些内容）</p>
+<h2 id="2-第三方模块-包"><a href="#2-第三方模块-包" class="headerlink" title="2.第三方模块(包) "></a>2.第三方模块(包) </h2><pre><code>自动下载地址    www.npmjs.com       ==&gt; express，mysql             npm==&gt;n
+需要已经安装好了npm，随着nodejs一起安装，      npm  install  express
+切换到要下载的目录
+（1） cd    完整的目录    回车
+         change   directory
+（2）在要下载的目录空白区域，按住shift，单击右键-&gt;在此处打开powershell窗口
+        使用npm安装
+         npm   install   包的名称
+</code></pre><h2 id="3-核心模块"><a href="#3-核心模块" class="headerlink" title="3.核心模块"></a>3.核心模块</h2><pre><code>是NODEJS官方提供的模块，可以直接引入，不需要创建
+</code></pre><p> （1）查询字符串模块——querystring<br>       查询字符串 ： 浏览器向服务器发送请求，传递属鸡的一种方式<br>          协议，域名，端口<br>        <a href="http://www.codeboy.com:80/product_details.html?==&gt;lid=5&amp;name=dell(查询字符串)" target="_blank" rel="noopener">http://www.codeboy.com:80/product_details.html?==&gt;lid=5&amp;name=dell(查询字符串)</a><br>       parse()    将查询字符串解析为对象<br>       stringify()  将对象转为查询字符串<br>练习：把百度搜索时的查询字符串解析为对象，获取关键字<br>        ie=utf-8&amp;f=8&amp;rsv_bp=0<br> （2）URL模块——url       ===&gt;引入格式：const  url=require(‘url’)<br>         parse()        将url解析为对象<br>         protocol     协议<br>         hostname   主机（域名/ip地址）<br>         port            端口<br>         pathname   文件在服务器上的路径<br>         query          查询字符串<br>                  format ()      将对象转为url        注：query属性对应的是对象格式用  { }<br>练习：创建文件08_exercise.js,浏览器请求的url为<br>         <a href="http://www.tmoo.cn:80/course/web.html?cname=js&amp;price=5000" target="_blank" rel="noopener">http://www.tmoo.cn:80/course/web.html?cname=js&amp;price=5000</a><br>     服务器端获取传递的数据cname和price</p>
+<h2 id="4-全局函数"><a href="#4-全局函数" class="headerlink" title="4.全局函数"></a>4.全局函数</h2><pre><code>      parseInt/parseFloat/encodeURI/decodeUPI/isNaN/isFinite/eval
+（1）一次性定时器
+ 开启定时器       var timer=setTimeout(回调函数，间隔时间)；
+ 清除定时器       当间隔时间到了，会执行回调函数；单位是毫秒
+                        clearTimeout(timer);       
+（2）周期性定时器
+ 开启定时器      var timer=setInterval(回调函数，间隔时间)；
+                        当每隔一段时间，执行一次回调函数
+ 清除定时器       clearInterval(timer);
+</code></pre><p>练习： 使用周期定时器，每隔3秒钟打印hello，打印4次后，清除定时器<br>           setImmediate  立即执行        callback回调函数<br>         （3）立即执行定时器（了解）<br>           process.nextTick(回调函数)<br>            在当前事件的结尾执行<br>           var timer=setImmediate(回调函数)<br>            清除       clearImmediate(timer)<br>            在下一组事件的开头执行</p>
+<h2 id="5-文件系统模块"><a href="#5-文件系统模块" class="headerlink" title="5.文件系统模块"></a>5.文件系统模块</h2><pre><code> 用于操作服务器的文件(目录)，例如：创建目录，删除目录，读取目录。创建文件，删除文件，写入文件......
+（1）创建目录
+            fs.mkdir(路径，回调函数)
+（2）移除目录
+            fs.rmdir(路径，回调函数)
+（3）读取目录                                writeFile写入文件
+           fs.readdir(路径，回调函数) ——异步                
+          fs.readdirSync(路径)           ——同步
+           //  同步函数，必须执行完 然后才能执行后续的代码=阻塞
+           //  异步函数，放到最后去执行=非阻塞，不会阻止后续代码的执行
+      对比同步和异步的区别
+      同步会阻止后续代码的执行，只有执行完以后才会执行后续代码； 是通过返回值来获取结果
+      异步不会阻止后续代码的执行，在整个程序的最后执行；是通过回调函数来获取结果  ——&gt; 常用于一些比较耗时的操作
+ （4）写入文件
+          fs.writeFile(路径，数据，回调函数)——如果文件不存在，则会创建文件，然后写入数据如果文件已经存在，则会清空文件中的内容，然后写入数据
+</code></pre><p>课后任务： （1）复习今天的内容，整理思维导图<br>          （2）练习：创建目录mydir，在该目录下创建文件1.txt，同时写入数据abc，创建文件2.txt，写入数据hello；读取mydir目录，删除mydir（全部使用同步方法）<br>          （3）预习http协议</p>
+
       
 
       
@@ -271,6 +308,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/21/day16/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          HTTP协议
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/19/day14/" id="article-nav-older" class="article-nav-link-wrap">
