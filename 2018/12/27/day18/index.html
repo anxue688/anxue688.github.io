@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Botn to death</title>
+  <title>MySQL模块 | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="1.第三方中间件body-parser可以将post请求的数据解析为对象使用中间件                const bodyParser=require(‘body-parser’);                server.use(bodyParser.urlencoded({                exotended:false                }))">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL模块">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/day18/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="1.第三方中间件body-parser可以将post请求的数据解析为对象使用中间件                const bodyParser=require(‘body-parser’);                server.use(bodyParser.urlencoded({                exotended:false                }))">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-27T12:42:16.696Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="MySQL模块">
+<meta name="twitter:description" content="1.第三方中间件body-parser可以将post请求的数据解析为对象使用中间件                const bodyParser=require(‘body-parser’);                server.use(bodyParser.urlencoded({                exotended:false                }))">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,295 +159,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-day18" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MySQL模块
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/27/day18/" class="archive-article-date">
+
+        
+        <a href="/2018/12/27/day18/" class="archive-article-date">
   	<time datetime="2018-12-27T12:41:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/day18/">MySQL模块</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.第三方中间件body-parser<br>可以将post请求的数据解析为对象<br>使用中间件<br>                const bodyParser=require(‘body-parser’);<br>                server.use(bodyParser.urlencoded({<br>                exotended:false<br>                }))<br>                urlencoded   将post请求的数据解析为对象<br>                extended:false   不适用第三方的qs模块，而是使用核心模块<br>                querystring  将数据解析为<br>                     在路由中获取数据<br>                     req.body  返回对象格式<br>2.MySQL模块<br>增    INSERT  INTO emp VALUES(NULL，’tom’…)<br>删    DELETE  FROM emp WHERE eid=5;<br>改    UPDATE  emp  SET  ename=’tom’,sex=1 WHERE eid=5;<br>查    SELECT * FROM   emp;<br>mysql.exe -h127.0.0.1 -P3306 -uroot  -p;<br>（1）普通连接——&gt; 每次创建完都要关闭<br>var connect=mysql.createConnection({});创建连接对象，传递mysql服务器的IP地址/域名，端口，用户名，密码，使用的数据库<br>connection.connect();    执行连接<br>connection.query(sql,callback)  sql要执行的SQL语句，callback回调函数，获取SQL语句结果。<br>connection.end();       执行完所有的SQL语句，关闭连接。<br>（2）使用连接池——&gt;更高效<br>connectionLimit:10    默认连接数量<br>var pool=mysql.createPool({});   创建连接池对象，传递mysql服务器的IP地址/域名，端口，用户名，密码，使用的数据库，设置连接池的大小（connectionLimit）<br>pool.query(sql,callback)  sql执行的SQL语句，callback回调函数，获取SQL语句的执行结果。<br>练习:往员工表中插入一条数据；修改员工编号为7的数据，生日修改为2000-1-1，工资修改为7500；删除员工编号为10的数据；<br>每次运行完一组后注释。关注每个操作的结果<br>INSERT INTO emp VALUES(‘1 ‘,’ A’,’10 ‘)/(?,?,?),[1，’A’,10]<br>UPDATE emp SET birthday=’2000-1-1’,salary=’7500’ WHERE eid=7;<br>DELETE  FROM emp WHERE  eid=10;<br>练习：创建web服务器，托管静态资源到public下，在该目录下创建add.html下，点击提交按钮。向服务器端发送请求(get/add),服务器获取数据，把获取数据插入到tedu下的dept表中</p>
+<p>课后任务：<br>  （1）复习今天内容，整理思维导图<br>  （2）练习：通过表单往数据库中插入员工数据tedu下emp<br>           请求方法post      URL：/add</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/27/day18/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/24/day17/" class="archive-article-date">
-  	<time datetime="2018-12-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/24/day17/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">路由，路由器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/day17/">路由，路由器</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/21/day16/" class="archive-article-date">
-  	<time datetime="2018-12-21T10:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/21/day16/">HTTP协议</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/20/day15/" class="archive-article-date">
-  	<time datetime="2018-12-20T12:19:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/20/day15/">模块</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/19/day14/" class="archive-article-date">
-  	<time datetime="2018-12-19T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/19/day14/">NODEJS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/day13/" class="archive-article-date">
-  	<time datetime="2018-12-18T10:38:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/day13/">Math,Date,Number对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/17/day12/" class="archive-article-date">
-  	<time datetime="2018-12-17T12:03:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/17/day12/">JS——字符串对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/14/day11/" class="archive-article-date">
-  	<time datetime="2018-12-14T10:09:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/14/day11/">数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/13/day10/" class="archive-article-date">
-  	<time datetime="2018-12-13T10:32:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/13/day10/">匿名函数，全局函数，对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/12/day09/" class="archive-article-date">
-  	<time datetime="2018-12-12T11:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/12/day09/">函数类型及其作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -470,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

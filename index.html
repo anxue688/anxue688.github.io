@@ -160,6 +160,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day18" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/27/day18/">MySQL模块</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/27/day18/" class="archive-article-date">
+  	<time datetime="2018-12-27T12:41:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.第三方中间件body-parser<br>可以将post请求的数据解析为对象<br>使用中间件<br>                const bodyParser=require(‘body-parser’);<br>                server.use(bodyParser.urlencoded({<br>                exotended:false<br>                }))<br>                urlencoded   将post请求的数据解析为对象<br>                extended:false   不适用第三方的qs模块，而是使用核心模块<br>                querystring  将数据解析为<br>                     在路由中获取数据<br>                     req.body  返回对象格式<br>2.MySQL模块<br>增    INSERT  INTO emp VALUES(NULL，’tom’…)<br>删    DELETE  FROM emp WHERE eid=5;<br>改    UPDATE  emp  SET  ename=’tom’,sex=1 WHERE eid=5;<br>查    SELECT * FROM   emp;<br>mysql.exe -h127.0.0.1 -P3306 -uroot  -p;<br>（1）普通连接——&gt; 每次创建完都要关闭<br>var connect=mysql.createConnection({});创建连接对象，传递mysql服务器的IP地址/域名，端口，用户名，密码，使用的数据库<br>connection.connect();    执行连接<br>connection.query(sql,callback)  sql要执行的SQL语句，callback回调函数，获取SQL语句结果。<br>connection.end();       执行完所有的SQL语句，关闭连接。<br>（2）使用连接池——&gt;更高效<br>connectionLimit:10    默认连接数量<br>var pool=mysql.createPool({});   创建连接池对象，传递mysql服务器的IP地址/域名，端口，用户名，密码，使用的数据库，设置连接池的大小（connectionLimit）<br>pool.query(sql,callback)  sql执行的SQL语句，callback回调函数，获取SQL语句的执行结果。<br>练习:往员工表中插入一条数据；修改员工编号为7的数据，生日修改为2000-1-1，工资修改为7500；删除员工编号为10的数据；<br>每次运行完一组后注释。关注每个操作的结果<br>INSERT INTO emp VALUES(‘1 ‘,’ A’,’10 ‘)/(?,?,?),[1，’A’,10]<br>UPDATE emp SET birthday=’2000-1-1’,salary=’7500’ WHERE eid=7;<br>DELETE  FROM emp WHERE  eid=10;<br>练习：创建web服务器，托管静态资源到public下，在该目录下创建add.html下，点击提交按钮。向服务器端发送请求(get/add),服务器获取数据，把获取数据插入到tedu下的dept表中</p>
+<p>课后任务：<br>  （1）复习今天内容，整理思维导图<br>  （2）练习：通过表单往数据库中插入员工数据tedu下emp<br>           请求方法post      URL：/add</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/27/day18/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day17" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -167,13 +231,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/21/day17/">路由，路由器</a>
+      <a class="article-title" href="/2018/12/24/day17/">路由，路由器</a>
     </h1>
   
 
         
-        <a href="/2018/12/21/day17/" class="archive-article-date">
-  	<time datetime="2018-12-21T10:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-21</time>
+        <a href="/2018/12/24/day17/" class="archive-article-date">
+  	<time datetime="2018-12-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
 </a>
         
       </header>
@@ -198,7 +262,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/21/day17/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/12/24/day17/">展开全文 >></a>
         </p>
       
 
@@ -798,79 +862,6 @@ console.log(str);              #  1*1=1
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/12/12/day09/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day08" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/11/day08/">逻辑结构（下）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/11/day08/" class="archive-article-date">
-  	<time datetime="2018-12-11T11:43:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.break关键字<br>        可以结束任何形式的循环<br>        练习：使用变量保存1个数字，循环弹出提示框输入数字，如果数字猜大了，<br>        弹出警示框提示‘big’，如果数字猜小了，用、弹出警示框‘small’，否则提示‘right’，结束循环<br>2.do-while循环<br>     do{<br>     循环体<br>     }while(循环条件);<br>       循环方式：先执行一次循环体，无论循环条件是否为true<br>       //练习：声明一个变量保存密码‘123456’，循环弹出提示框输入密码，<br>       如果输入正确，弹出警示框提示‘login succes’，结束循环<br>3.for循环     ①初始值②循环条件③如何变化<br>     for(①;②;③){<br>       循环体<br>     }<br>     练习：  (1)计算1~100之间所有数字的和<br>            (2)打印50~20之间所有的奇数<br>     如果循环条件有多个，则最后一个起作用   continue  继续<br>4.break和continue<br>     break：结束循环，后续不会再执行其他的循环<br>      continue：跳过本次循环，继续执行下一次循环。<br>5.循环嵌套</p>
-<pre><code>  while、do-while、for循环之间可以相互嵌套  //内层循环，控制循环的行数 j——行号 // 外层循环 控制循环的列数  i——列号 
-    #99乘法表正序                      ②       #99乘法表倒序
-//外层循环，循环行数9次                 ②  //外层循环，循环行数9次     
-for(var j=1;j&lt;=9;j++){                ② for(var j=1;j&lt;=9;j++){
-//内层循环，循环列数                    ② //内层循环，循环列数 
-for(var i=1,str=&apos;&apos;;i&lt;=j;i++){         ② for(var i=1,str=&apos;&apos;;i&lt;=j;i++){
-str+=i+&apos; * &apos;+j+&apos;=&apos;+(i * j)+&apos; &apos;;       ②  str+=i+&apos; * &apos;+j+&apos;=&apos;+(i * j)+&apos; &apos;;
-}console.log(str);                    ②  }console.log(str);
-}                                     ②  }
-</code></pre><p> 课后任务：<br>    （1）复习今天内容，整理思维导图<br>    （2）练习：打印倒着的99乘法表<br>    （3）计算1~100之间的和，当和大于4000的时候，结束循环，打印当前和是多少<br>        《javascript高级程序设计》第三版   红宝石<br>        《javascript权威指南》       第六版   犀牛书</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/11/day08/">展开全文 >></a>
         </p>
       
 
