@@ -167,13 +167,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/29/day21/">列表，表格</a>
+      <a class="article-title" href="/2018/12/30/day21/">列表，表格</a>
     </h1>
   
 
         
-        <a href="/2018/12/29/day21/" class="archive-article-date">
-  	<time datetime="2018-12-29T10:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-29</time>
+        <a href="/2018/12/30/day21/" class="archive-article-date">
+  	<time datetime="2018-12-30T10:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-30</time>
 </a>
         
       </header>
@@ -186,22 +186,13 @@
 <p>后端部分——对提交数据进行处理的接口(user.js)<br>3.表单的标签</p>
 <p><form></form><br>属性:<br>(1)action——定义表单被提交的动作，通常定义的是服务器处理程序的地址(url/接口)，默认提交给本页<br>(2)method——指定表单的提交方式<br> get默认值 —&gt;①明文提交，提交的内容会显示在地址栏上<br>                        ②提交数据大小有上限，不能超过2kb<br>                        ③向服务器要数据的时候，使用get<br>post —-&gt;①隐式提交，提交的数据不会显示在地址栏中<br>                ②提交数据没有大小限制<br>                ③要传递数据给服务器的时候，使用post<br>(3)delete<br>(4)put</p>
 <p>3.emctype——指定表单数据的编码方式，允许将什么样的数据提交给服务器<br>（1）默认值application/x-www-form-urlencoded<br>特点：可以提交任意字符给服务器，不能提交文件<br>（2）txet/plain  只能提交普通字符(不包含特殊字符，比如&amp;)<br>（3）multipart/form-data    允许将文件提交给服务器</p>
-<p>4.表单控件——能够与用户交互的可视化元素<br>分类：<br>（1）input元素<br>（2）textarea 多行文本域<br>（3）select和option 下拉选择框<br>（4）其他元素<br>1.input元素——在页面中提供各种各样的输入控件   如：文本框，密码框，单选，多选，按钮等等</p>
-<p><input>或者<input><br>属性：①type  指定input控件的类型<br>          ②name 为控件定义名称，提供给服务器端使用，如果想提交本控制的值，就必须写<br>          ③value  控件值，提交给服务器使用的值<br>          ④disabled  无值属性(后面无需添加东西也可生效)，禁用控件，不能操作，而且不能提交了</p>
-<ol start="2">
-<li>input详情<pre><code> ①文本框和密码框
-文本框 type=&apos;tetx&apos;
-密码框 type=&apos;password&apos;
-maxlength  指定限制输入的最大字符数
-readonly   无值属性，只能看不能写，但是可以提交
-placeholder   占位符，默认显示在控件上文本，做提示用，不会被提交
- ②按钮
-1. 提交按钮  type=&apos;submit&apos;  ——将表单中的数据提交给服务器
+<p>4.表单控件——能够与用户交互的可视化元素<br>分类：<br>（1）input元素<br>（2）textarea 多行文本域<br>（3）select和option 下拉选择框<br>（4）其他元素<br>1.input元素——在页面中提供各种各样的输入控件   如：文本框，密码框，单选，多选，按钮等等 <input>或者<input></p>
+<p>属性：①type  指定input控件的类型<br>          ②name 为控件定义名称，提供给服务器端使用，如果想提交本控制的值，就必须写<br>          ③value  控件值，提交给服务器使用的值<br>          ④disabled  无值属性(后面无需添加东西也可生效)，禁用控件，不能操作，而且不能提交了<br>2.input详情<br>          ①文本框和密码框<br>         文本框 type=’tetx’<br>         密码框 type=’password’<br>         maxlength  指定限制输入的最大字符数<br>         readonly   无值属性，只能看不能写，但是可以提交<br>         placeholder   占位符，默认显示在控件上文本，做提示用，不会被提交<br>          ②按钮</p>
+<pre><code>1. 提交按钮  type=&apos;submit&apos;  ——将表单中的数据提交给服务器
 2. 重置按钮  type=&apos;reset&apos; ——将表单内容恢复到初始化状态
 3. 普通按钮  type=&apos;button&apos;——没有任何特殊功能，自带submit功能
    value 定义按钮上的文字
-</code></pre>3.单选按钮和复选按钮<br>单选按钮 type=’radio’</li>
-</ol>
+</code></pre><p> 3.单选按钮和复选按钮<br>  单选按钮 type=’radio’</p>
 <p>属性：<br>name;除了定义控件名称以外，还起到分组的作用<br>复选框的那么，必须定义为 <strong>数组</strong><br>必须添加value属性，才能正确的提交值<br>checked 无值属性，设置默认被选中项<br>4.隐藏域<br>type=’hidden’<br>想提交给服务器，但是不想给用户看的数据，可以放在隐藏域中<br>5.文件选择框<br>type=’file’<br>注意：需要把form的method设置为post，enctype设置为multipart/form-data<br>属性：multiple 设置多文件上传（按照Ctrl选择）<br>5.文本域——允许录入多行数据的文本框</p>
 <p><textarea name="p1" id="" cols="5" rows="3"></textarea><br>cols 指定文本域的列数<br>rows 指定文本域的行数<br>超出部分会显示滚动条<br>6.下拉选择框(下拉选)</p>
 <p><select><br>     <option></option><br>      …..<br></select><br>select属性<br>      name 定义下拉选的名称<br>      value 下拉选的值<br>      size定义显示选项的数量，默认1 。 如果取值大于1，元素表现为滚动列表<br>      multiple 设置多选，无值属性。只要设置multiple，下拉列表变为滚动列表<br>                    注意：name要写数组<br>option属性<br>       value定义选项的值，如果定义了选项的值，提交的时候select的value就是选项的value<br>       select 无属性值，设置默认选中<br>7.其他的元素<br>1.label 关联文本与表单控件</p>
@@ -221,7 +212,7 @@ placeholder   占位符，默认显示在控件上文本，做提示用，不会
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/29/day21/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/12/30/day21/">展开全文 >></a>
         </p>
       
 
@@ -341,7 +332,7 @@ placeholder   占位符，默认显示在控件上文本，做提示用，不会
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>title: 表格<br>date: 2018-12-28 22:30:00</p>
+<p>title: 表格<br>date: 2018-12-29 22:30:00</p>
 <h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>一：图像和链接<br>1.使用<br><img>或者<img><br>属性：src=’url’  引用图片资源的路径<br>2.URL<br>名词解释：文件目录—–文件，文件夹嵌套结构<br>URL：Uniform Resource Locator 统一资源定位符，俗称‘路径’<br>3.路径的表现形式<br>（1）绝对路径———&gt;完整的路径<br>      1）使用网络资源的时候，使用绝对路径<br>通信协议+主机名称+文件目录结构+文件的具体名称<br>优点：不占用服务器本地存储空间<br>缺点：不稳定<br>      2）使用本地资源，可以使用绝对路径<br>    项目中绝对不可以使用<br>（2）相对路径<br>使用本服务器资源的时候使用<br>      1）同级目录<br>直接引用文件名<img src="07.png" alt=""><br>      2）子级目录<br>          先进入兄弟文件夹，在引用文明名<img src="image/08.png"><br>      3）父级目录<br>          先返回上一级目录。再引用文件名&lt;img. src=’../07.png’&gt;<br>3.img标签的属性<br>   src：source 源，图像资源路径<br>   alt：资源出错的时候，提示的文本<br> width：宽 px为单位的数字<br>height：高 px为单位的数字<br>%:无效<br>解决图片失真(设置的宽度与图片默认宽高比不一致)<br> width/height只设置一个，让另一个自适应<br>4.链接<br>（1）语法<br><a helf="‘url’"></a><br>属性：<br>helf：链接的路径<br>target：指定打开链接的方式<br>取值：_self  默认值，在当前的标签页打开新网页<br>          _blank 在新的标签页中打开网页<br>（2）a标签的其他表现形式<br>      可以下载资源——<a href="00.zip">下载</a><br>          新建邮件——<a href="mailto:g-chengliang@tedu.cn" target="_blank" rel="noopener">新建邮件</a><br>         执行js代码<br>         function show(){<br>           alert(‘小老弟，你在看什么’)<br>               }<br>               <br>               <a href="javascript:show()" target="_blank" rel="noopener">执行js代码</a><br>               <br>               <br>        返回页面顶部<br>           <a href="#">返回页面顶部</a><br>5.锚点<br>页面中的一个记号，可以通过点击超链接的方式，直接回到(记号处)锚点<br>（1）使用锚点<br>        1）定义锚点<br>            第一种方式<s name="锚点名称"><br>           第二种方式 给任意的标签添加id，把id当做锚点名称使用<br>                     <any id="锚点名称"><br>        2）链接到锚点<br>      <a href="#锚点名称">链接本页锚点</a><br>      <a href="其他的url#锚点名称">链接其他页面锚点&lt;&gt;<br>        页面链接到锚点字后，地址栏会显示锚点名称<br>二.表格<br>1,标记<br>   <table><br>    <tr><br>        <td></td><br>     </tr><br>   </table><br>表格：table<br>行：tr   table row<br>列：td  table data<br>2.属性：<br>border：设置边框表格<br>width ：<br>height：  如果设置的宽高小于表格的内容，表格按内容走<br>               如果设置的宽高大于表格的内容，表格按设置的走<br>align  表格水平对其方式left/center/right<br>bgcolor 表格的背景颜色，合法颜色值<br>bordercolor 边框颜色，合法颜色值<br>cellpadding  设置单元格内边距（边框与内容之间的距离）<br>cellspacing   设置单元格外边距（边框与边框之间的距离）<br>data 数据     date时期时间<br>2.tr的属性<br>align     设置当前行的文本水平对齐方式  left/center/right      （左/中/右）<br>valign   设置当前行的垂直对齐方式         top/middle/bottom（上/中/下）<br>3.td的属性<br>width    当前列的宽度，会影响整个表格这一列<br>height   当前列的高度，会影响整个行的高度<br>align/valign   设置当前列内容的对齐方式<br>bgcolor   设置当前列的背景颜色<br>colspan     跨列<br>rowspan    跨行<br>3,不规则的表格使用<br>跨列<br>colspan  从指定单元格的位置开始，横向向右合并n的单元格(n包含自己本身)，被合并的单元格要删除<br>从指定单元格位置开始，纵向向下合并n个单元格(n包含自己本身)，被合并的单元格要删除<br>四：可选标记<br>1.行/列的标题</a></any></s></p>
 <p><th></th>与<td></td>一样的使用方式<br>内容文字文体加粗，并且水平居中<br>2.表格标题</p>
 <p><caption></caption><br>如果要设置表格标题，必须将<caption>放在<table>之后<br>5.表格的复杂应用<br>行分组<br>可以将连续的几行，划分到同一组中，进行统一的管理<br>1.表头行<thead></thead>     表格开始几行放入表头<br>2.表主体<tbody></tbody>   表格的中间几行放入表主体<br>3.表尾行<tfoot></tfoot>      表格的最后几行放入<br>表格嵌套<br>  表格中所有的嵌套表格只能写在td中</table></caption></p>
