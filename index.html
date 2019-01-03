@@ -160,6 +160,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day23" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/03/day23/">DOM和Ajax</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/03/day23/" class="archive-article-date">
+  	<time datetime="2019-01-03T12:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一：简易dom操作<br>      1.完整的javascript的组成<br>         （1）js核心：ECMA Script    ES5~ES6<br>         （2）DOM:   Document Object Model  文档对象模型<br>                  让js动态操作页面元素<br>         （3）BOM：Browser  Object Model  浏览器对象模型<br>                  让js动态操作浏览器<br>      2.简化获取元素对象<br>            <div id="d1"></div><br>            var elem1=document.getElementById(‘d1’);<br>            H5支持直接使用id表示标签对象<br>            d1.innnerHTML<br>      3.获取/修改双标签的内容<br>           console.log(d1.innerHTML)<br>           d1.innerHTML=’  ‘<br>      4.获取/修改单标签的值<br>          t1.value<br>    总结：<br>         dom操作标签内容（简化版）的总结<br>             ①要操作的标签，必须有id<br>             ②通过id直接调用innerHTML或者value属性<br>              双标签:       id.innerHTML<br>              input标签:  id.value<br>      5.元素的事件——允许通过用户的行为来激发的操作就是事件<br>              onclick<br>              文本框或者密码框失去焦点的事件  onblur<br>              文本框或者密码框获取焦点的事件  onfocus<br>常见错误总结<br>           Uncaught  SyntaxError      有标点符号错误<br>           unexpected token<br>二：Ajax<br>    1.名词解释<br>    （1）同步Synchoronous——在一个任务进行中时，不能开启其它任务<br>         同步访问：浏览器向服务器发送请求时，浏览器只能等待服务器的响应，不能做其它的任何事情<br>         出现场合：1）地址栏输入网址访问网页(网速不好时，更明显)<br>                          2）a   标签跳转<br>                          3）submit   提交<br>    （2）异步Asynchronous——在一个任务开启时，可以开启其它任务。<br>         异步访问：浏览器在向服务器发送请求时，不耽误用户在网页中的其它操作<br>         出现场合：1）用户的验证<br>                          2）聊天室<br>                          3）搜索建议<br>                          4）股票走势图</p>
+<pre><code>2.Ajax
+      Asynchronous javascript and Xml(现在使用json居多)ajaj
+      本质：使用js提供的异步对象(XMLHttpRequest)
+      异步向服务器发送请求，并接收响应回来的数据。
+      ajax可以无刷新的效果更改页面的布局内容
+3.异步请求的步骤
+     （1）创建异步对象
+            ①标准创建ie8以上的版本支持的创建方式
+               var xhr=new  XMLHttpRequest();
+               IE8以下版本创建
+               通过判断window.XMLHttpRequest来判断浏览器是否支持标准创建
+                              var xhr=new ActiveXObject(&apos;Microsoft.XMLHttp&apos;)
+            ②异步对象的属性和方法
+                  a）readyState  属性
+                        值0~4,    5个状态
+                        0：请求未初始化
+                        1：已经打开到服务器的连接，正在发送请求     
+                        2：接收响应头
+                        3：接收的响应主体
+                        4：响应数据接收成功
+                  b）status 服务器的响应状态码 
+                        当status的值为200时，表示服务器正确处理了请求，并给出了响应
+                  c） onreadystatechange   onclick
+                        当xhr对象的readyState属性值发生改变时自动的激发
+     （2）绑定监听事件(接收请求)
+     （3）打开连接(创建请求)
+             创建请求，打开连接
+              xhr.open(method,url,isAsyn);
+              method:请求的方法（get/post...），一个string格式
+              url：      访问的服务器的地址（接口），string
+              isAsyn： 是否采用异步的方式请求，boolean（true异步/false同步） 
+     （4）发送请求
+              xhr.send(body)
+              使用get方法的的时候，body为null，或者不写
+              使用post方法，要创建请求主体 
+              使用get，发送带参数的请求                   一个接口只能回一个响应
+</code></pre><p>练习：在demo路由中创建一个接口，响应输出一句话‘这是我的第一个ajax程序’<br>          1，在与app.js平级的位置，创建新的文件夹。ajax<br>          2.把03_ajax.html复制进去<br>          3.需要在app.js中对静态资源进行托管<br>          4.重启服务器<br>          5.浏览器地址栏使用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/03/day23/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day22" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -829,70 +929,6 @@ js中的5种基础数据类型？
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/12/19/day14/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day13" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/18/day13/">Math,Date,Number对象</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/18/day13/" class="archive-article-date">
-  	<time datetime="2018-12-18T10:38:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.Math对象<br>        abs()          取绝对值<br>        floor()       向下取整<br>        ceil()          向上取整<br>        round()      四舍五入取整<br>        max()         取一组数字最大值<br>        min()         取一组数字最小值<br>        pow(x,y)    取x的y次幂<br>        PI               取圆周率<br>        random()   取随机数       1&gt;范围&gt;=0<br>2.通过Unicode码获取对应的字符<br>         String.fromCharCode(编码)<br>3.Date对象<br>         用于对日期时间进行存储和计算<br>         （1）创建Date对象<br>                new   Date(‘2018/12/25 10:30:50’)<br>                new   Date(2018,10,25,10,30,50)//第二个参数月分<br>                new   Date()         存储当前系统时间<br>                new   Date(1000<em>60</em>60*24)     存储的是距离计算机元年毫秒数赌赢的日期时间<br>         （2）获取Date对象中的日期时间<br>                 getFullYear  Month  Date   Hours  Minutes  Milliseconds(毫秒)   getDay(星期)  getTime获取距离计算机元年的毫秒数<br>         （3）转为本地日期时间格式<br>                   toLocaleString()     //年-月-日   时：分：秒<br>                   toLocaleDateString()      //年-月-日<br>                   toLocaleTimeString()     //时：分：秒<br>         （4）设置日期时间<br>                  setFullYear/Month/Date/Hours/Minutes/Seconds/Milliseconds/Time<br>                  setTime设置距离计算机元年的毫秒数，一旦设置后，所有的日期时间都会受到影响<br>  练习：创建Date对象，保存员工的入职时间‘2018-11-16’，3年后合同到期，合同到期前1个月续签合同 ，<br>            如果续签时间是周末，提前到周五。提前一周通知人力准备续签（提醒时间）<br>                分别打印入职时间，到期时间，续签时间，提醒时间<br>练习：计算当前时间距离2018年圣诞节还有？天？时？分？秒<br>4.Number对象<br>            new Number(数据)<br>            创建一个Nunber对象，同时将数据转为数值型<br>              toFixed(n)     保留小数点后n位<br>              toString(n)   将数值型转为字符串类型，n设置转为的进制（2,8,16）<br>              Number.MAX_VALUE    获取计算机能存储的最大数值<br>              Number.MIN_VALUE    获取计算机能存储的最小数值<br>5.Boolean对象<br>             Boolean() / new  Boolean()<br>            创建Boolean对象，同时将数据转为布尔型<br>              !!数据           将数据转换为布尔型<br>              toString()    将布尔型数据转为字符串<br>6.ES6<br>    ECMAScript6<br>      （1）块级作用域<br>              特点：①使用let 关键字来声明变量，只能在块级作用域下访问<br>                           块级作用域: { } if/else/while/do-while/for里面大括号都是块级作用域<br>                        ②let关键字声明的变量不存在声明提升<br>      （2）箭头函数<br>                 是回调函数的另一种写法，和匿名函数不完全一致<br>                    sort((a,b)=&gt;{return a-b)};<br>                 如果函数中只有一行代码，并且是return形式，可以简化sort((a,b)=&gt;a-b);             </p>
-<p>课后任务:<br>             (1)复习今天内容，整理思维导图，回顾服务器概念<br>             (2)练习：双色球：随机取1~33之间的6个数字，不能重复，并且从小到大排序；随机取1~16之间一个数字，和之前6个数字组成数组<br>             (3)回顾服务器概念</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/18/day13/">展开全文 >></a>
         </p>
       
 

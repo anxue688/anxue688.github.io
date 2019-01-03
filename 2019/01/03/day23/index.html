@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Botn to death</title>
+  <title>DOM和Ajax | Botn to death</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="药丸博客">
+  <meta name="description" content="一：简易dom操作      1.完整的javascript的组成         （1）js核心：ECMA Script    ES5~ES6         （2）DOM:   Document Object Model  文档对象模型                  让js动态操作页面元素         （3）BOM：Browser  Object Model  浏览器对象模型">
 <meta name="keywords" content="沙雕欢乐多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Botn to death">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM和Ajax">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/day23/index.html">
 <meta property="og:site_name" content="Botn to death">
-<meta property="og:description" content="药丸博客">
+<meta property="og:description" content="一：简易dom操作      1.完整的javascript的组成         （1）js核心：ECMA Script    ES5~ES6         （2）DOM:   Document Object Model  文档对象模型                  让js动态操作页面元素         （3）BOM：Browser  Object Model  浏览器对象模型">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-03T12:07:09.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Botn to death">
-<meta name="twitter:description" content="药丸博客">
+<meta name="twitter:title" content="DOM和Ajax">
+<meta name="twitter:description" content="一：简易dom操作      1.完整的javascript的组成         （1）js核心：ECMA Script    ES5~ES6         （2）DOM:   Document Object Model  文档对象模型                  让js动态操作页面元素         （3）BOM：Browser  Object Model  浏览器对象模型">
   
     <link rel="alternative" href="/atom.xml" title="Botn to death" type="application/atom+xml">
   
@@ -158,299 +159,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-day23" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      DOM和Ajax
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/03/day23/" class="archive-article-date">
+
+        
+        <a href="/2019/01/03/day23/" class="archive-article-date">
   	<time datetime="2019-01-03T12:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/03/day23/">DOM和Ajax</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/02/day22/" class="archive-article-date">
-  	<time datetime="2019-01-02T11:00:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/02/day22/">HTTP协议和缓存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p>一：简易dom操作<br>      1.完整的javascript的组成<br>         （1）js核心：ECMA Script    ES5~ES6<br>         （2）DOM:   Document Object Model  文档对象模型<br>                  让js动态操作页面元素<br>         （3）BOM：Browser  Object Model  浏览器对象模型<br>                  让js动态操作浏览器<br>      2.简化获取元素对象<br>            <div id="d1"></div><br>            var elem1=document.getElementById(‘d1’);<br>            H5支持直接使用id表示标签对象<br>            d1.innnerHTML<br>      3.获取/修改双标签的内容<br>           console.log(d1.innerHTML)<br>           d1.innerHTML=’  ‘<br>      4.获取/修改单标签的值<br>          t1.value<br>    总结：<br>         dom操作标签内容（简化版）的总结<br>             ①要操作的标签，必须有id<br>             ②通过id直接调用innerHTML或者value属性<br>              双标签:       id.innerHTML<br>              input标签:  id.value<br>      5.元素的事件——允许通过用户的行为来激发的操作就是事件<br>              onclick<br>              文本框或者密码框失去焦点的事件  onblur<br>              文本框或者密码框获取焦点的事件  onfocus<br>常见错误总结<br>           Uncaught  SyntaxError      有标点符号错误<br>           unexpected token<br>二：Ajax<br>    1.名词解释<br>    （1）同步Synchoronous——在一个任务进行中时，不能开启其它任务<br>         同步访问：浏览器向服务器发送请求时，浏览器只能等待服务器的响应，不能做其它的任何事情<br>         出现场合：1）地址栏输入网址访问网页(网速不好时，更明显)<br>                          2）a   标签跳转<br>                          3）submit   提交<br>    （2）异步Asynchronous——在一个任务开启时，可以开启其它任务。<br>         异步访问：浏览器在向服务器发送请求时，不耽误用户在网页中的其它操作<br>         出现场合：1）用户的验证<br>                          2）聊天室<br>                          3）搜索建议<br>                          4）股票走势图</p>
+<pre><code>2.Ajax
+      Asynchronous javascript and Xml(现在使用json居多)ajaj
+      本质：使用js提供的异步对象(XMLHttpRequest)
+      异步向服务器发送请求，并接收响应回来的数据。
+      ajax可以无刷新的效果更改页面的布局内容
+3.异步请求的步骤
+     （1）创建异步对象
+            ①标准创建ie8以上的版本支持的创建方式
+               var xhr=new  XMLHttpRequest();
+               IE8以下版本创建
+               通过判断window.XMLHttpRequest来判断浏览器是否支持标准创建
+                              var xhr=new ActiveXObject(&apos;Microsoft.XMLHttp&apos;)
+            ②异步对象的属性和方法
+                  a）readyState  属性
+                        值0~4,    5个状态
+                        0：请求未初始化
+                        1：已经打开到服务器的连接，正在发送请求     
+                        2：接收响应头
+                        3：接收的响应主体
+                        4：响应数据接收成功
+                  b）status 服务器的响应状态码 
+                        当status的值为200时，表示服务器正确处理了请求，并给出了响应
+                  c） onreadystatechange   onclick
+                        当xhr对象的readyState属性值发生改变时自动的激发
+     （2）绑定监听事件(接收请求)
+     （3）打开连接(创建请求)
+             创建请求，打开连接
+              xhr.open(method,url,isAsyn);
+              method:请求的方法（get/post...），一个string格式
+              url：      访问的服务器的地址（接口），string
+              isAsyn： 是否采用异步的方式请求，boolean（true异步/false同步） 
+     （4）发送请求
+              xhr.send(body)
+              使用get方法的的时候，body为null，或者不写
+              使用post方法，要创建请求主体 
+              使用get，发送带参数的请求                   一个接口只能回一个响应
+</code></pre><p>练习：在demo路由中创建一个接口，响应输出一句话‘这是我的第一个ajax程序’<br>          1，在与app.js平级的位置，创建新的文件夹。ajax<br>          2.把03_ajax.html复制进去<br>          3.需要在app.js中对静态资源进行托管<br>          4.重启服务器<br>          5.浏览器地址栏使用</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/30/day21/" class="archive-article-date">
-  	<time datetime="2018-12-30T10:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/30/day21/">列表，表格</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/03/day23/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/28/day19/" class="archive-article-date">
-  	<time datetime="2018-12-28T13:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/02/day22/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP协议和缓存</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/28/day19/">HTML5简介基础</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/28/day20/" class="archive-article-date">
-  	<time datetime="2018-12-28T12:02:24.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-28</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/27/day18/" class="archive-article-date">
-  	<time datetime="2018-12-27T12:41:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/day18/">MySQL模块</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/24/day17/" class="archive-article-date">
-  	<time datetime="2018-12-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/day17/">路由，路由器</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/21/day16/" class="archive-article-date">
-  	<time datetime="2018-12-21T10:13:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/21/day16/">HTTP协议</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/20/day15/" class="archive-article-date">
-  	<time datetime="2018-12-20T12:19:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/20/day15/">模块</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/19/day14/" class="archive-article-date">
-  	<time datetime="2018-12-19T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/19/day14/">NODEJS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -474,8 +368,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
